@@ -41,9 +41,11 @@ class RecipeIngredient(Base):
         index=True,
     )
 
-    ingredient_name: Mapped[str] = mapped_column(
-        String(120),
+    ingredient_id: Mapped[uuid.UUID] = mapped_column(
+        Uuid(as_uuid=True),
+        ForeignKey("ingredients.id"),
         nullable=False,
+        index=True,
     )
 
     quantity: Mapped[Decimal | None] = mapped_column(
