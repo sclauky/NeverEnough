@@ -7,3 +7,5 @@ from app.models.recipe_ingredient import RecipeIngredient
 from app.models.recipe_step import RecipeStep
 from app.models.user_budget import UserBudget
 from app.models.product_price import ProductPrice
+from app.models.meal_plan import MealPlan
+from app.models.meal_plan_entry import MealPlanEntry
