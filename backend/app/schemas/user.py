@@ -37,3 +37,21 @@ class UserMe(UserPublic):
     email: EmailStr
     is_active: bool
     created_at: datetime
+    
+class UserLogin(BaseModel):
+    model_config = ConfigDict(
+        extra="forbid",
+        str_strip_whitespace=True,
+    )
+
+    email: EmailStr
+    password: str = Field(
+        min_length=1,
+        max_length=128,
+        repr=False,
+    )
+
+
+class TokenResponse(BaseModel):
+    access_token: str
+    token_type: str = "bearer"
