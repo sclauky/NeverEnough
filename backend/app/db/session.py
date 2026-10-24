@@ -18,7 +18,6 @@ def get_engine() -> AsyncEngine: # check if db is well configured
         raise RuntimeError(
             "DATABASE_URL n'est pas configurée."
         )
-
     url = make_url(settings.database_url)
 
     if url.drivername in {"postgres", "postgresql"}:
