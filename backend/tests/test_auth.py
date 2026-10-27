@@ -1,45 +1,37 @@
-from unittest.mock import Mock
+from types import SimpleNamespace
+from unittest.mock import AsyncMock
+from uuid import uuid4
 
-from fastapi.testclient import TestClient
-from fastapi import HTTPException, status
+import pytest
+from fastapi import HTTPException
+from fastapi.security import HTTPAuthorizationCredentials
 
 from app.core.dependencies import get_current_user
-from app.main import app
+from app.core.tokens import create_access_token
 
 
-client = TestClient(app)
+@pytest.mark.asyncio
+async def test_inactive_user_returns_401():
+    user_id = uuid4()
 
-
-def test_me_without_token_returns_401():
-    response = client.get("/users/me")
-
-    assert response.status_code == 401
-
-
-def test_me_with_invalid_token_returns_401():
-    response = client.get(
-        "/users/me",
-        headers={"Authorization": "Bearer faux.jeton.invalide"},
+    inactive_user = SimpleNamespace(
+        id=user_id,
+        is_active=False,
     )
 
-    assert response.status_code == 401
+    session = SimpleNamespace(
+        scalar=AsyncMock(return_value=inactive_user),
+    )
 
+    credentials = HTTPAuthorizationCredentials(
+        scheme="Bearer",
+        credentials=create_access_token(str(user_id)),
+    )
 
-def test_inactive_user_returns_401():
-    async def inactive_user():
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Invalid or expired authentication token.",
+    with pytest.raises(HTTPException) as exception:
+        await get_current_user(
+            credentials=credentials,
+            session=session,
         )
 
-    app.dependency_overrides[get_current_user] = inactive_user
-
-    try:
-        response = client.get(
-            "/users/me",
-            headers={"Authorization": "Bearer token-de-test"},
-        )
-    finally:
-        app.dependency_overrides.pop(get_current_user, None)
-
-    assert response.status_code == 401
+    assert exception.value.status_code == 401

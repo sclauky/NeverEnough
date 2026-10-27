@@ -9,10 +9,8 @@ from app.core.security import hash_password, verify_password
 from app.core.tokens import create_access_token
 from app.db.session import get_session
 from app.models.user import User
-from app.schemas.user import UserCreate, UserLogin, UserMe, TokenResponse
-
+from app.schemas.user import UserCreate, UserLogin, UserMe, TokenResponse, UserPublic, UserUpdate
 from app.core.dependencies import get_current_user
-from app.schemas.user import UserPublic
 
 
 router = APIRouter(prefix="/users", tags=["Users"])
@@ -99,4 +97,47 @@ async def login_user(
 async def read_current_user(
     current_user: User = Depends(get_current_user),
 ) -> User:
+    return current_user
+
+
+@router.patch("/me", response_model=UserPublic)
+async def update_current_user(
+    user_data: UserUpdate,
+    current_user: User = Depends(get_current_user),
+    session: AsyncSession = Depends(get_session),
+) -> User:
+    updates = user_data.model_dump(exclude_unset=True)
+
+    if not updates:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="No changes provided.",
+        )
+
+    if "username" in updates:
+        existing_user = await session.scalar(
+            select(User).where(
+                User.username == updates["username"],
+                User.id != current_user.id,
+            )
+        )
+
+        if existing_user:
+            raise HTTPException(
+                status_code=status.HTTP_409_CONFLICT,
+                detail="Username already exists.",
+            )
+
+        current_user.username = updates["username"]
+
+    try:
+        await session.commit()
+        await session.refresh(current_user)
+    except IntegrityError:
+        await session.rollback()
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail="Username already exists.",
+        )
+
     return current_user
