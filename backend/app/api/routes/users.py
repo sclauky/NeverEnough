@@ -235,22 +235,17 @@ async def request_email_change(
 @router.post("/me/email/confirm")
 async def confirm_email_change(
     token: str = Body(..., embed=True),
-    current_user: User = Depends(get_current_user),
     session: AsyncSession = Depends(get_session),
 ) -> dict:
     token_hash = hash_email_change_token(token)
 
     email_request = await session.scalar(
         select(EmailChangeRequest).where(
-            EmailChangeRequest.user_id == current_user.id,
             EmailChangeRequest.token_hash == token_hash,
         )
     )
 
-    if email_request is None or not hmac.compare_digest(
-        email_request.token_hash,
-        token_hash,
-    ):
+    if email_request is None:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail="Invalid confirmation token.",
@@ -265,10 +260,23 @@ async def confirm_email_change(
             detail="Confirmation token has expired.",
         )
 
+    user = await session.scalar(
+        select(User).where(User.id == email_request.user_id)
+    )
+
+    if user is None:
+        await session.delete(email_request)
+        await session.commit()
+
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Invalid confirmation request.",
+        )
+
     existing_user = await session.scalar(
         select(User).where(
             User.email == email_request.new_email,
-            User.id != current_user.id,
+            User.id != user.id,
         )
     )
 
@@ -281,7 +289,7 @@ async def confirm_email_change(
             detail="Email already exists.",
         )
 
-    current_user.email = email_request.new_email
+    user.email = email_request.new_email
     await session.delete(email_request)
 
     try:
