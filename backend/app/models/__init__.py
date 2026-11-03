@@ -12,3 +12,7 @@ from app.models.meal_plan_entry import MealPlanEntry
 from app.models.shopping_list import ShoppingList
 from app.models.shopping_list_item import ShoppingListItem
 from app.models.email_change_request import EmailChangeRequest
+from app.models.user_preferences import UserPreferences
+from app.models.user_dietary_preference import UserDietaryPreference
+from app.models.user_allergy import UserAllergy
+from app.models.user_kitchen_equipment import UserKitchenEquipment

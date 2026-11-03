@@ -31,6 +31,18 @@ from app.schemas.user import (
     UserUpdate,
 )
 
+from app.models.user_preferences import UserPreferences
+from app.models.user_dietary_preference import UserDietaryPreference
+from app.models.user_allergy import UserAllergy
+from app.models.user_kitchen_equipment import UserKitchenEquipment
+from app.models.user_budget import UserBudget
+from app.schemas.user_budget import UserBudgetCreate, UserBudgetPublic
+
+from app.schemas.user_preferences import (
+    UserPreferencesUpdate,
+    UserPreferencesResponse,
+)
+
 router = APIRouter(prefix="/users", tags=["Users"])
 
 
@@ -329,3 +341,201 @@ async def confirm_email_change(
     return {
         "message": "Your email address has been successfully updated."
     }
+    
+@router.get("/me/preferences", response_model=UserPreferencesResponse)
+async def get_current_user_preferences(
+    current_user: User = Depends(get_current_user),
+    session: AsyncSession = Depends(get_session),
+):
+    result = await session.execute(
+        select(UserPreferences).where(
+            UserPreferences.user_id == current_user.id
+        )
+    )
+    preferences = result.scalar_one_or_none()
+
+    if preferences is None:
+        return UserPreferencesResponse(
+            dietary_preferences=[],
+            allergies=[],
+            kitchen_equipment=[],
+        )
+
+    dietary_result = await session.execute(
+        select(UserDietaryPreference.preference).where(
+            UserDietaryPreference.user_preferences_id == preferences.id
+        )
+    )
+
+    allergy_result = await session.execute(
+        select(UserAllergy.allergy).where(
+            UserAllergy.user_preferences_id == preferences.id
+        )
+    )
+
+    equipment_result = await session.execute(
+        select(UserKitchenEquipment.equipment).where(
+            UserKitchenEquipment.user_preferences_id == preferences.id
+        )
+    )
+
+    return UserPreferencesResponse(
+        dietary_preferences=list(dietary_result.scalars().all()),
+        allergies=list(allergy_result.scalars().all()),
+        kitchen_equipment=list(equipment_result.scalars().all()),
+    )
+
+
+@router.put("/me/preferences", response_model=UserPreferencesResponse)
+async def update_current_user_preferences(
+    data: UserPreferencesUpdate,
+    current_user: User = Depends(get_current_user),
+    session: AsyncSession = Depends(get_session),
+):
+    try:
+        result = await session.execute(
+            select(UserPreferences).where(
+                UserPreferences.user_id == current_user.id
+            )
+        )
+        preferences = result.scalar_one_or_none()
+
+        if preferences is None:
+            preferences = UserPreferences(user_id=current_user.id)
+            session.add(preferences)
+            await session.flush()
+
+        await session.execute(
+            delete(UserDietaryPreference).where(
+                UserDietaryPreference.user_preferences_id == preferences.id
+            )
+        )
+
+        await session.execute(
+            delete(UserAllergy).where(
+                UserAllergy.user_preferences_id == preferences.id
+            )
+        )
+
+        await session.execute(
+            delete(UserKitchenEquipment).where(
+                UserKitchenEquipment.user_preferences_id == preferences.id
+            )
+        )
+
+        session.add_all([
+            UserDietaryPreference(
+                user_preferences_id=preferences.id,
+                preference=value,
+            )
+            for value in data.dietary_preferences
+        ])
+
+        session.add_all([
+            UserAllergy(
+                user_preferences_id=preferences.id,
+                allergy=value,
+            )
+            for value in data.allergies
+        ])
+
+        session.add_all([
+            UserKitchenEquipment(
+                user_preferences_id=preferences.id,
+                equipment=value,
+            )
+            for value in data.kitchen_equipment
+        ])
+
+        await session.commit()
+
+        return UserPreferencesResponse(
+            dietary_preferences=data.dietary_preferences,
+            allergies=data.allergies,
+            kitchen_equipment=data.kitchen_equipment,
+        )
+
+    except Exception:
+        await session.rollback()
+        raise
+    
+
+@router.get("/me/budget", response_model=UserBudgetPublic)
+async def get_current_user_budget(
+    current_user: User = Depends(get_current_user),
+    session: AsyncSession = Depends(get_session),
+):
+    result = await session.execute(
+        select(UserBudget).where(
+            UserBudget.user_id == current_user.id
+        )
+    )
+
+    budget = result.scalar_one_or_none()
+
+    if budget is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="No budget found.",
+        )
+
+    return budget
+
+
+@router.put("/me/budget", response_model=UserBudgetPublic)
+async def update_current_user_budget(
+    data: UserBudgetCreate,
+    current_user: User = Depends(get_current_user),
+    session: AsyncSession = Depends(get_session),
+):
+    try:
+        result = await session.execute(
+            select(UserBudget).where(
+                UserBudget.user_id == current_user.id
+            )
+        )
+
+        budget = result.scalar_one_or_none()
+
+        if budget is None:
+            budget = UserBudget(
+                user_id=current_user.id,
+                amount=data.amount,
+                period_type=data.period_type,
+            )
+            session.add(budget)
+        else:
+            budget.amount = data.amount
+            budget.period_type = data.period_type
+
+        await session.commit()
+        await session.refresh(budget)
+
+        return budget
+
+    except Exception:
+        await session.rollback()
+        raise
+
+
+@router.delete("/me/budget", status_code=status.HTTP_204_NO_CONTENT)
+async def delete_current_user_budget(
+    current_user: User = Depends(get_current_user),
+    session: AsyncSession = Depends(get_session),
+):
+    result = await session.execute(
+        select(UserBudget).where(
+            UserBudget.user_id == current_user.id
+        )
+    )
+
+    budget = result.scalar_one_or_none()
+
+    if budget is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="No budget found.",
+        )
+
+    await session.delete(budget)
+    await session.commit()
