@@ -1,4 +1,3 @@
-
 import hmac
 import uuid
 
@@ -27,6 +26,7 @@ from app.schemas.user import (
     UserLogin,
     UserMe,
     TokenResponse,
+    UserPasswordUpdate,
     UserPublic,
     UserUpdate,
 )
@@ -161,6 +161,31 @@ async def update_current_user(
 
     return current_user
 
+
+@router.patch("/me/password")
+async def update_current_user_password(
+    password_data: UserPasswordUpdate,
+    current_user: User = Depends(get_current_user),
+    session: AsyncSession = Depends(get_session),
+) -> dict:
+    if not verify_password(
+        password_data.current_password,
+        current_user.password_hash,
+    ):
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Current password is incorrect.",
+        )
+
+    current_user.password_hash = hash_password(
+        password_data.new_password
+    )
+
+    await session.commit()
+
+    return {
+        "message": "Your password has been successfully updated."
+    }
 
 @router.post("/me/email/change-request")
 async def request_email_change(

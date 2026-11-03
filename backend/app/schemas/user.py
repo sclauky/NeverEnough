@@ -1,7 +1,14 @@
+
 from datetime import datetime
 from uuid import UUID
 
-from pydantic import BaseModel, ConfigDict, EmailStr, Field
+from pydantic import (
+    BaseModel,
+    ConfigDict,
+    EmailStr,
+    Field,
+    model_validator,
+)
 
 
 class UserCreate(BaseModel):
@@ -37,7 +44,8 @@ class UserMe(UserPublic):
     email: EmailStr
     is_active: bool
     created_at: datetime
-    
+
+
 class UserLogin(BaseModel):
     model_config = ConfigDict(
         extra="forbid",
@@ -55,7 +63,7 @@ class UserLogin(BaseModel):
 class TokenResponse(BaseModel):
     access_token: str
     token_type: str = "bearer"
-    
+
 
 class UserUpdate(BaseModel):
     model_config = ConfigDict(
@@ -78,3 +86,35 @@ class UserEmailUpdate(BaseModel):
     )
 
     email: EmailStr
+
+
+class UserPasswordUpdate(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    current_password: str = Field(
+        min_length=1,
+        max_length=128,
+        repr=False,
+    )
+
+    new_password: str = Field(
+        min_length=12,
+        max_length=128,
+        repr=False,
+    )
+
+    confirm_new_password: str = Field(
+        min_length=12,
+        max_length=128,
+        repr=False,
+    )
+
+    @model_validator(mode="after")
+    def validate_new_passwords(self):
+        if self.new_password != self.confirm_new_password:
+            raise ValueError("New passwords do not match.")
+
+        if self.new_password == self.current_password:
+            raise ValueError("New password must be different.")
+
+        return self
