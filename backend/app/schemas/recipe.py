@@ -1,7 +1,11 @@
+
 from datetime import datetime
 from uuid import UUID
 
 from pydantic import BaseModel, ConfigDict, Field
+
+from app.schemas.recipe_ingredient import RecipeIngredientPublic
+from app.schemas.recipe_step import RecipeStepPublic
 
 
 class RecipeCreate(BaseModel):
@@ -51,3 +55,8 @@ class RecipePublic(BaseModel):
     is_public: bool
     created_at: datetime
     updated_at: datetime
+
+
+class RecipeDetail(RecipePublic):
+    ingredients: list[RecipeIngredientPublic]
+    steps: list[RecipeStepPublic]
