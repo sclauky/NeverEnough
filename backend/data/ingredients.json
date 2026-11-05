@@ -1,0 +1,2367 @@
+{
+  "categories": [
+    {
+      "name": "Pâtes alimentaires",
+      "ingredients": [
+        {
+          "name": "Pâtes",
+          "variants": [
+            "Spaghetti",
+            "Spaghetti complets",
+            "Spaghetti sans gluten",
+            "Linguine",
+            "Bucatini",
+            "Capellini",
+            "Vermicelles",
+            "Tagliatelles",
+            "Tagliatelles fraîches",
+            "Fettuccine",
+            "Pappardelle",
+            "Lasagnes",
+            "Lasagnes fraîches",
+            "Cannelloni",
+            "Penne",
+            "Penne rigate",
+            "Penne complètes",
+            "Penne sans gluten",
+            "Rigatoni",
+            "Tortiglioni",
+            "Macaroni",
+            "Coquillettes",
+            "Fusilli",
+            "Fusilli complets",
+            "Farfalle",
+            "Conchiglie",
+            "Orecchiette",
+            "Radiatori",
+            "Trofie",
+            "Pipe rigate",
+            "Risoni",
+            "Orzo",
+            "Gnocchetti sardi",
+            "Raviolis",
+            "Tortellini",
+            "Tortelloni",
+            "Ravioles",
+            "Pâtes alphabet",
+            "Pâtes aux œufs",
+            "Pâtes fraîches",
+            "Pâtes complètes",
+            "Pâtes semi-complètes",
+            "Pâtes de lentilles",
+            "Pâtes de pois chiches",
+            "Pâtes de riz",
+            "Pâtes de maïs",
+            "Pâtes au sarrasin",
+            "Pâtes protéinées"
+          ]
+        },
+        {
+          "name": "Nouilles",
+          "variants": [
+            "Nouilles de blé",
+            "Nouilles aux œufs",
+            "Nouilles de riz",
+            "Nouilles de riz plates",
+            "Nouilles de riz fines",
+            "Nouilles soba",
+            "Nouilles udon",
+            "Nouilles ramen",
+            "Nouilles shirataki",
+            "Nouilles de konjac",
+            "Nouilles de soja",
+            "Nouilles de patate douce",
+            "Vermicelles de riz",
+            "Vermicelles de soja"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Riz et céréales",
+      "ingredients": [
+        {
+          "name": "Riz",
+          "variants": [
+            "Riz basmati",
+            "Riz basmati complet",
+            "Riz thaï",
+            "Riz jasmin",
+            "Riz long grain",
+            "Riz rond",
+            "Riz blanc",
+            "Riz complet",
+            "Riz semi-complet",
+            "Riz rouge",
+            "Riz noir",
+            "Riz sauvage",
+            "Riz arborio",
+            "Riz carnaroli",
+            "Riz à sushi",
+            "Riz à risotto",
+            "Riz gluant",
+            "Riz précuit",
+            "Riz étuvé",
+            "Riz parfumé"
+          ]
+        },
+        {
+          "name": "Quinoa",
+          "variants": [
+            "Quinoa blanc",
+            "Quinoa rouge",
+            "Quinoa noir",
+            "Quinoa tricolore"
+          ]
+        },
+        {
+          "name": "Semoule",
+          "variants": [
+            "Semoule de blé fine",
+            "Semoule de blé moyenne",
+            "Semoule de blé grosse",
+            "Semoule complète",
+            "Semoule de maïs",
+            "Semoule de manioc"
+          ]
+        },
+        {
+          "name": "Boulgour",
+          "variants": [
+            "Boulgour fin",
+            "Boulgour moyen",
+            "Boulgour gros",
+            "Boulgour complet"
+          ]
+        },
+        {
+          "name": "Autres céréales",
+          "variants": [
+            "Épeautre",
+            "Petit épeautre",
+            "Orge perlé",
+            "Millet",
+            "Sarrasin",
+            "Amarante",
+            "Polenta",
+            "Maïs concassé",
+            "Freekeh"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Farines et fécules",
+      "ingredients": [
+        {
+          "name": "Farine de blé",
+          "variants": [
+            "Farine T45",
+            "Farine T55",
+            "Farine T65",
+            "Farine T80",
+            "Farine T110",
+            "Farine T130",
+            "Farine T150",
+            "Farine de gruau",
+            "Farine de blé fluide",
+            "Farine de blé complète"
+          ]
+        },
+        {
+          "name": "Farines alternatives",
+          "variants": [
+            "Farine de sarrasin",
+            "Farine de seigle",
+            "Farine d'épeautre",
+            "Farine de petit épeautre",
+            "Farine de riz",
+            "Farine de maïs",
+            "Farine de châtaigne",
+            "Farine de lentilles",
+            "Farine de coco",
+            "Farine d'amande",
+            "Farine de noisette",
+            "Farine de millet",
+            "Farine de quinoa",
+            "Farine de teff",
+            "Farine de manioc",
+            "Farine de lupin"
+          ]
+        },
+        {
+          "name": "Fécule",
+          "variants": [
+            "Fécule de maïs",
+            "Fécule de pomme de terre",
+            "Fécule de tapioca",
+            "Fécule d'arrow-root",
+            "Fécule de manioc"
+          ]
+        },
+        {
+          "name": "Son et produits céréaliers",
+          "variants": [
+            "Son de blé",
+            "Son d'avoine",
+            "Germe de blé",
+            "Flocons d'avoine",
+            "Flocons d'avoine fins",
+            "Flocons d'avoine complets",
+            "Flocons de sarrasin",
+            "Flocons de quinoa",
+            "Flocons de seigle"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Produits laitiers",
+      "ingredients": [
+        {
+          "name": "Lait de vache",
+          "variants": [
+            "Lait entier",
+            "Lait demi-écrémé",
+            "Lait écrémé",
+            "Lait microfiltré entier",
+            "Lait microfiltré demi-écrémé",
+            "Lait frais entier",
+            "Lait frais demi-écrémé",
+            "Lait UHT entier",
+            "Lait UHT demi-écrémé",
+            "Lait UHT écrémé",
+            "Lait sans lactose entier",
+            "Lait sans lactose demi-écrémé",
+            "Lait enrichi en protéines",
+            "Lait enrichi en calcium",
+            "Lait concentré sucré",
+            "Lait concentré non sucré",
+            "Lait en poudre entier",
+            "Lait en poudre écrémé",
+            "Lait ribot",
+            "Lait fermenté"
+          ]
+        },
+        {
+          "name": "Laits animaux",
+          "variants": [
+            "Lait de chèvre",
+            "Lait de brebis",
+            "Lait de bufflonne",
+            "Lait de jument"
+          ]
+        },
+        {
+          "name": "Crème liquide",
+          "variants": [
+            "Crème liquide entière",
+            "Crème liquide 35 %",
+            "Crème liquide 33 %",
+            "Crème liquide 30 %",
+            "Crème liquide 20 %",
+            "Crème liquide 18 %",
+            "Crème liquide 15 %",
+            "Crème liquide 12 %",
+            "Crème liquide légère",
+            "Crème liquide sans lactose",
+            "Crème liquide bio",
+            "Crème fleurette",
+            "Crème à fouetter",
+            "Crème chantilly liquide"
+          ]
+        },
+        {
+          "name": "Crème épaisse",
+          "variants": [
+            "Crème fraîche épaisse entière",
+            "Crème fraîche épaisse légère",
+            "Crème fraîche épaisse 30 %",
+            "Crème fraîche épaisse 20 %",
+            "Crème fraîche épaisse 15 %",
+            "Crème fraîche épaisse 12 %",
+            "Crème fraîche épaisse sans lactose",
+            "Crème fraîche épaisse bio",
+            "Crème semi-épaisse",
+            "Crème crue",
+            "Crème d'Isigny"
+          ]
+        },
+        {
+          "name": "Crème spéciale",
+          "variants": [
+            "Crème à cuisson",
+            "Crème à gratin",
+            "Crème chantilly",
+            "Crème mascarpone",
+            "Crème aigre",
+            "Crème acidulée",
+            "Crème de cuisine",
+            "Crème légère de cuisine"
+          ]
+        },
+        {
+          "name": "Beurre",
+          "variants": [
+            "Beurre doux",
+            "Beurre demi-sel",
+            "Beurre salé",
+            "Beurre cru",
+            "Beurre extra-fin",
+            "Beurre fin",
+            "Beurre de baratte",
+            "Beurre clarifié",
+            "Beurre allégé",
+            "Beurre léger",
+            "Beurre sans lactose",
+            "Beurre bio"
+          ]
+        },
+        {
+          "name": "Margarine",
+          "variants": [
+            "Margarine classique",
+            "Margarine végétale",
+            "Margarine allégée",
+            "Margarine de cuisson",
+            "Margarine à tartiner",
+            "Margarine sans huile de palme"
+          ]
+        },
+        {
+          "name": "Yaourts",
+          "variants": [
+            "Yaourt nature",
+            "Yaourt nature entier",
+            "Yaourt nature demi-écrémé",
+            "Yaourt nature 0 %",
+            "Yaourt grec",
+            "Yaourt à la grecque",
+            "Yaourt brassé",
+            "Yaourt ferme",
+            "Yaourt velouté",
+            "Yaourt à boire",
+            "Yaourt aromatisé",
+            "Yaourt aux fruits",
+            "Yaourt bifidus",
+            "Yaourt sans lactose",
+            "Yaourt enrichi en protéines",
+            "Yaourt au lait de chèvre",
+            "Yaourt au lait de brebis"
+          ]
+        },
+        {
+          "name": "Fromage blanc et desserts frais",
+          "variants": [
+            "Fromage blanc 0 %",
+            "Fromage blanc 3 %",
+            "Fromage blanc 20 %",
+            "Fromage blanc 40 %",
+            "Fromage blanc battu",
+            "Faisselle",
+            "Petit-suisse nature",
+            "Petit-suisse sucré",
+            "Skyr nature",
+            "Skyr aromatisé",
+            "Petit fromage frais",
+            "Dessert lacté",
+            "Riz au lait",
+            "Semoule au lait",
+            "Crème dessert vanille",
+            "Crème dessert chocolat",
+            "Liégeois",
+            "Flan pâtissier",
+            "Île flottante"
+          ]
+        },
+        {
+          "name": "Fromages frais",
+          "variants": [
+            "Fromage frais nature",
+            "Fromage frais ail et fines herbes",
+            "Fromage à tartiner",
+            "Carré frais",
+            "St Môret",
+            "Philadelphia",
+            "Mascarpone",
+            "Ricotta",
+            "Mozzarella fraîche",
+            "Burrata",
+            "Feta",
+            "Chèvre frais",
+            "Brousse",
+            "Cottage cheese",
+            "Labneh"
+          ]
+        },
+        {
+          "name": "Fromages à pâte molle",
+          "variants": [
+            "Camembert",
+            "Brie",
+            "Coulommiers",
+            "Neufchâtel",
+            "Chaource",
+            "Brillat-Savarin",
+            "Munster",
+            "Maroilles",
+            "Pont-l'Évêque",
+            "Livarot",
+            "Reblochon",
+            "Époisses",
+            "Langres"
+          ]
+        },
+        {
+          "name": "Fromages à pâte pressée",
+          "variants": [
+            "Comté",
+            "Emmental",
+            "Gruyère",
+            "Beaufort",
+            "Abondance",
+            "Cantal",
+            "Salers",
+            "Tomme de Savoie",
+            "Raclette",
+            "Morbier",
+            "Saint-Nectaire",
+            "Ossau-Iraty",
+            "Cheddar",
+            "Gouda",
+            "Edam",
+            "Mimolette"
+          ]
+        },
+        {
+          "name": "Fromages à pâte persillée",
+          "variants": [
+            "Roquefort",
+            "Bleu d'Auvergne",
+            "Fourme d'Ambert",
+            "Bleu de Gex",
+            "Gorgonzola",
+            "Stilton"
+          ]
+        },
+        {
+          "name": "Fromages râpés et préparations",
+          "variants": [
+            "Emmental râpé",
+            "Gruyère râpé",
+            "Comté râpé",
+            "Mozzarella râpée",
+            "Cheddar râpé",
+            "Mélange de fromages râpés",
+            "Parmesan râpé",
+            "Parmesan en copeaux",
+            "Fromage fondu",
+            "Fromage à burger",
+            "Tranches de cheddar",
+            "Fromage à raclette en tranches"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fruits",
+      "ingredients": [
+        {
+          "name": "Pommes",
+          "variants": [
+            "Pomme Golden",
+            "Pomme Granny Smith",
+            "Pomme Gala",
+            "Pomme Pink Lady",
+            "Pomme Reinette",
+            "Pomme Fuji",
+            "Pomme rouge",
+            "Pomme verte",
+            "Pomme à cuire",
+            "Pomme séchée",
+            "Compote de pommes",
+            "Purée de pommes",
+            "Pommes en conserve"
+          ]
+        },
+        {
+          "name": "Poires",
+          "variants": [
+            "Poire Williams",
+            "Poire Conférence",
+            "Poire Comice",
+            "Poire Rocha",
+            "Poire à cuire",
+            "Poire séchée",
+            "Poires au sirop"
+          ]
+        },
+        {
+          "name": "Agrumes",
+          "variants": [
+            "Citron jaune",
+            "Citron vert",
+            "Citron bergamote",
+            "Orange",
+            "Orange sanguine",
+            "Mandarine",
+            "Clémentine",
+            "Pamplemousse rose",
+            "Pamplemousse blanc",
+            "Pomelo",
+            "Yuzu",
+            "Kumquat",
+            "Cédrat",
+            "Zeste de citron",
+            "Zeste d'orange",
+            "Jus de citron",
+            "Jus d'orange",
+            "Jus de pamplemousse",
+            "Pulpe d'agrumes"
+          ]
+        },
+        {
+          "name": "Fruits rouges et baies",
+          "variants": [
+            "Fraise",
+            "Fraise des bois",
+            "Framboise",
+            "Mûre",
+            "Myrtille",
+            "Cassis",
+            "Groseille rouge",
+            "Groseille à maquereau",
+            "Airelle",
+            "Canneberge",
+            "Baie de sureau",
+            "Baie de goji",
+            "Baie d'açaï",
+            "Cranberries séchées",
+            "Fraises séchées",
+            "Framboises surgelées",
+            "Fruits rouges surgelés"
+          ]
+        },
+        {
+          "name": "Fruits à noyau",
+          "variants": [
+            "Abricot",
+            "Abricot sec",
+            "Pêche jaune",
+            "Pêche blanche",
+            "Nectarine",
+            "Brugnon",
+            "Prune",
+            "Quetsche",
+            "Mirabelle",
+            "Reine-Claude",
+            "Cerise",
+            "Griotte",
+            "Cerise amarena",
+            "Pruneau",
+            "Pêches au sirop",
+            "Abricots au sirop"
+          ]
+        },
+        {
+          "name": "Fruits exotiques",
+          "variants": [
+            "Banane",
+            "Banane plantain",
+            "Ananas",
+            "Mangue",
+            "Papaye",
+            "Fruit de la passion",
+            "Fruit du dragon",
+            "Litchi",
+            "Longane",
+            "Ramboutan",
+            "Goyave",
+            "Grenade",
+            "Kaki",
+            "Kiwi vert",
+            "Kiwi jaune",
+            "Noix de coco fraîche",
+            "Chair de noix de coco",
+            "Noix de coco râpée",
+            "Mangue séchée",
+            "Ananas séché",
+            "Bananes séchées",
+            "Ananas en conserve",
+            "Mangue en conserve"
+          ]
+        },
+        {
+          "name": "Melons et pastèques",
+          "variants": [
+            "Melon charentais",
+            "Melon jaune",
+            "Melon vert",
+            "Pastèque",
+            "Pastèque sans pépins"
+          ]
+        },
+        {
+          "name": "Raisins et fruits secs",
+          "variants": [
+            "Raisin blanc",
+            "Raisin noir",
+            "Raisin rouge",
+            "Raisin sec blond",
+            "Raisin sec noir",
+            "Raisin de Corinthe",
+            "Datte fraîche",
+            "Datte séchée",
+            "Figue fraîche",
+            "Figue sèche",
+            "Mélange de fruits secs"
+          ]
+        },
+        {
+          "name": "Fruits préparés",
+          "variants": [
+            "Salade de fruits",
+            "Fruits au sirop",
+            "Fruits confits",
+            "Écorces d'orange confites",
+            "Écorces de citron confites",
+            "Cerises confites",
+            "Purée de fruits",
+            "Coulis de fruits",
+            "Pulpe de fruits",
+            "Fruits surgelés",
+            "Fruits déshydratés",
+            "Fruits lyophilisés",
+            "Confiture de fruits",
+            "Gelée de fruits"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Légumes",
+      "ingredients": [
+        {
+          "name": "Tomates",
+          "variants": [
+            "Tomate ronde",
+            "Tomate grappe",
+            "Tomate cerise",
+            "Tomate cocktail",
+            "Tomate cœur de bœuf",
+            "Tomate Roma",
+            "Tomate jaune",
+            "Tomate verte",
+            "Tomate ancienne",
+            "Tomate séchée",
+            "Tomate confite",
+            "Tomate pelée en conserve",
+            "Pulpe de tomate",
+            "Coulis de tomate",
+            "Purée de tomate",
+            "Concentré de tomate",
+            "Tomates concassées",
+            "Tomates en dés"
+          ]
+        },
+        {
+          "name": "Alliums",
+          "variants": [
+            "Oignon jaune",
+            "Oignon rouge",
+            "Oignon blanc",
+            "Oignon doux",
+            "Oignon grelot",
+            "Échalote",
+            "Échalote grise",
+            "Ail",
+            "Ail frais",
+            "Ail semoule",
+            "Ail en poudre",
+            "Ail confit",
+            "Ail noir",
+            "Oignon frit",
+            "Oignon déshydraté",
+            "Ciboule",
+            "Cébettes",
+            "Ciboulette",
+            "Poireau",
+            "Poireau surgelé"
+          ]
+        },
+        {
+          "name": "Légumes racines et tubercules",
+          "variants": [
+            "Carotte",
+            "Carotte nouvelle",
+            "Carotte violette",
+            "Pomme de terre",
+            "Pomme de terre grenaille",
+            "Pomme de terre à chair ferme",
+            "Pomme de terre à purée",
+            "Patate douce",
+            "Panais",
+            "Navet",
+            "Rutabaga",
+            "Radis noir",
+            "Radis rose",
+            "Betterave rouge",
+            "Betterave jaune",
+            "Céleri-rave",
+            "Topinambour",
+            "Salsifis",
+            "Scorsonère",
+            "Igname",
+            "Manioc",
+            "Taro",
+            "Gingembre frais",
+            "Gingembre confit",
+            "Curcuma frais",
+            "Raifort",
+            "Pomme de terre précuite",
+            "Frites surgelées",
+            "Purée de pommes de terre"
+          ]
+        },
+        {
+          "name": "Choux",
+          "variants": [
+            "Chou vert",
+            "Chou blanc",
+            "Chou rouge",
+            "Chou frisé",
+            "Chou kale",
+            "Chou chinois",
+            "Chou pak choï",
+            "Chou de Bruxelles",
+            "Chou-fleur",
+            "Brocoli",
+            "Romanesco",
+            "Chou-rave",
+            "Choucroute crue",
+            "Choucroute cuite",
+            "Chou fermenté",
+            "Brocoli surgelé",
+            "Chou-fleur surgelé"
+          ]
+        },
+        {
+          "name": "Légumes feuilles et salades",
+          "variants": [
+            "Laitue",
+            "Batavia",
+            "Feuille de chêne",
+            "Sucrine",
+            "Romaine",
+            "Mâche",
+            "Roquette",
+            "Épinards frais",
+            "Épinards surgelés",
+            "Blettes",
+            "Bette à carde",
+            "Endive",
+            "Scarole",
+            "Frisée",
+            "Chicorée",
+            "Cresson",
+            "Pourpier",
+            "Mesclun",
+            "Salade iceberg",
+            "Feuilles de vigne",
+            "Feuilles de bananier"
+          ]
+        },
+        {
+          "name": "Légumes fruits",
+          "variants": [
+            "Courgette",
+            "Courgette jaune",
+            "Aubergine",
+            "Poivron rouge",
+            "Poivron vert",
+            "Poivron jaune",
+            "Poivron orange",
+            "Piment doux",
+            "Piment fort",
+            "Piment jalapeño",
+            "Piment habanero",
+            "Concombre",
+            "Cornichon",
+            "Courge butternut",
+            "Potimarron",
+            "Potiron",
+            "Citrouille",
+            "Courge spaghetti",
+            "Courge musquée",
+            "Gombo",
+            "Chayotte",
+            "Tomatillo",
+            "Maïs doux",
+            "Maïs en épi",
+            "Maïs en conserve",
+            "Maïs surgelé"
+          ]
+        },
+        {
+          "name": "Légumineuses fraîches",
+          "variants": [
+            "Haricot vert",
+            "Haricot beurre",
+            "Haricot plat",
+            "Petit pois frais",
+            "Petit pois surgelé",
+            "Pois mange-tout",
+            "Pois gourmand",
+            "Fève fraîche",
+            "Edamame",
+            "Flageolet frais"
+          ]
+        },
+        {
+          "name": "Champignons",
+          "variants": [
+            "Champignon de Paris blanc",
+            "Champignon de Paris brun",
+            "Portobello",
+            "Shiitaké",
+            "Pleurote",
+            "Pleurote du panicaut",
+            "Girolle",
+            "Cèpe",
+            "Morille",
+            "Trompette-de-la-mort",
+            "Pied-de-mouton",
+            "Enoki",
+            "Shimeji",
+            "Champignon noir",
+            "Champignon séché",
+            "Champignon en conserve",
+            "Mélange de champignons surgelés"
+          ]
+        },
+        {
+          "name": "Légumes préparés et conserves",
+          "variants": [
+            "Ratatouille",
+            "Poêlée de légumes",
+            "Julienne de légumes",
+            "Macédoine de légumes",
+            "Légumes grillés",
+            "Légumes rôtis",
+            "Légumes marinés",
+            "Légumes lactofermentés",
+            "Légumes déshydratés",
+            "Légumes en conserve",
+            "Légumes surgelés",
+            "Fondue de poireaux",
+            "Épinards à la crème",
+            "Purée de légumes"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Viandes, volailles et charcuteries",
+      "ingredients": [
+        {
+          "name": "Bœuf",
+          "variants": [
+            "Steak de bœuf",
+            "Bavette de bœuf",
+            "Entrecôte",
+            "Faux-filet",
+            "Rumsteck",
+            "Filet de bœuf",
+            "Basse-côte",
+            "Paleron de bœuf",
+            "Macreuse de bœuf",
+            "Joue de bœuf",
+            "Bœuf à bourguignon",
+            "Bœuf haché",
+            "Bœuf haché 5 % MG",
+            "Bœuf haché 15 % MG",
+            "Bœuf haché 20 % MG",
+            "Boulettes de bœuf",
+            "Émincé de bœuf",
+            "Bœuf séché",
+            "Viande des Grisons",
+            "Carpaccio de bœuf",
+            "Tartare de bœuf"
+          ]
+        },
+        {
+          "name": "Porc",
+          "variants": [
+            "Filet mignon de porc",
+            "Rôti de porc",
+            "Côte de porc",
+            "Échine de porc",
+            "Poitrine de porc fraîche",
+            "Travers de porc",
+            "Joue de porc",
+            "Épaule de porc",
+            "Jarret de porc",
+            "Palette de porc",
+            "Sauté de porc",
+            "Porc haché",
+            "Émincé de porc",
+            "Lardons nature",
+            "Lardons fumés",
+            "Poitrine fumée",
+            "Poitrine salée",
+            "Pancetta",
+            "Porc effiloché",
+            "Jambonneau"
+          ]
+        },
+        {
+          "name": "Veau",
+          "variants": [
+            "Escalope de veau",
+            "Côte de veau",
+            "Rôti de veau",
+            "Blanquette de veau",
+            "Jarret de veau",
+            "Osso buco",
+            "Épaule de veau",
+            "Filet de veau",
+            "Veau haché",
+            "Émincé de veau"
+          ]
+        },
+        {
+          "name": "Agneau et mouton",
+          "variants": [
+            "Gigot d'agneau",
+            "Souris d'agneau",
+            "Côtelette d'agneau",
+            "Carré d'agneau",
+            "Épaule d'agneau",
+            "Collier d'agneau",
+            "Navarin d'agneau",
+            "Agneau haché",
+            "Émincé d'agneau",
+            "Mouton",
+            "Viande de mouton hachée"
+          ]
+        },
+        {
+          "name": "Volailles",
+          "variants": [
+            "Blanc de poulet",
+            "Escalope de poulet",
+            "Cuisse de poulet",
+            "Haut de cuisse de poulet",
+            "Pilons de poulet",
+            "Ailes de poulet",
+            "Poulet entier",
+            "Poulet rôti",
+            "Poulet haché",
+            "Poulet émincé",
+            "Poulet effiloché",
+            "Poulet pané",
+            "Nuggets de poulet",
+            "Aiguillettes de poulet",
+            "Dinde",
+            "Escalope de dinde",
+            "Filet de dinde",
+            "Cuisse de dinde",
+            "Dinde hachée",
+            "Canard",
+            "Magret de canard",
+            "Confit de canard",
+            "Cuisse de canard",
+            "Manchon de canard",
+            "Pintade",
+            "Caille",
+            "Oie"
+          ]
+        },
+        {
+          "name": "Gibier",
+          "variants": [
+            "Chevreuil",
+            "Sanglier",
+            "Cerf",
+            "Biche",
+            "Lièvre",
+            "Lapin",
+            "Faisan",
+            "Perdrix",
+            "Civet de gibier"
+          ]
+        },
+        {
+          "name": "Abats",
+          "variants": [
+            "Foie de bœuf",
+            "Foie de veau",
+            "Foie de volaille",
+            "Foie de porc",
+            "Rognons de bœuf",
+            "Rognons de veau",
+            "Cœur de bœuf",
+            "Langue de bœuf",
+            "Tripes",
+            "Ris de veau",
+            "Gésiers de volaille",
+            "Boudin noir",
+            "Boudin blanc",
+            "Andouillette"
+          ]
+        },
+        {
+          "name": "Jambons",
+          "variants": [
+            "Jambon blanc",
+            "Jambon supérieur",
+            "Jambon de Paris",
+            "Jambon cuit à l'os",
+            "Jambon fumé",
+            "Jambon cru",
+            "Jambon de Bayonne",
+            "Jambon de Parme",
+            "Jambon serrano",
+            "Jambon de Savoie",
+            "Jambon de dinde",
+            "Jambon de poulet"
+          ]
+        },
+        {
+          "name": "Charcuteries et saucisses",
+          "variants": [
+            "Saucisse de Toulouse",
+            "Saucisse de Strasbourg",
+            "Saucisse de Francfort",
+            "Saucisse fumée",
+            "Saucisse de Montbéliard",
+            "Saucisse de Morteau",
+            "Chipolata",
+            "Merguez",
+            "Chorizo doux",
+            "Chorizo fort",
+            "Chorizo à cuire",
+            "Rosette",
+            "Saucisson sec",
+            "Saucisson à l'ail",
+            "Salami",
+            "Mortadelle",
+            "Coppa",
+            "Lonzo",
+            "Rillettes de porc",
+            "Rillettes de canard",
+            "Pâté de campagne",
+            "Pâté de foie",
+            "Terrine de viande",
+            "Mousse de canard",
+            "Lard",
+            "Guanciale"
+          ]
+        },
+        {
+          "name": "Viandes préparées et panées",
+          "variants": [
+            "Cordon bleu de poulet",
+            "Cordon bleu de dinde",
+            "Escalope panée",
+            "Escalope milanaise",
+            "Croquette de viande",
+            "Boulettes de viande mélangée",
+            "Pain de viande",
+            "Hachis de viande",
+            "Farce de viande",
+            "Chair à saucisse",
+            "Kefta",
+            "Kebab de viande",
+            "Viande kebab surgelée",
+            "Viande des burgers",
+            "Steak haché surgelé"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Poissons et fruits de mer",
+      "ingredients": [
+        {
+          "name": "Poissons blancs",
+          "variants": [
+            "Cabillaud",
+            "Dos de cabillaud",
+            "Lieu noir",
+            "Lieu jaune",
+            "Colin",
+            "Merlu",
+            "Églefin",
+            "Merlan",
+            "Sole",
+            "Limande",
+            "Plie",
+            "Flétan",
+            "Turbot",
+            "Lotte",
+            "Bar",
+            "Dorade",
+            "maigre",
+            "Rouget",
+            "grondin",
+            "Julienne",
+            "Pangasius",
+            "Panga",
+            "Poisson blanc en filet",
+            "Poisson blanc surgelé"
+          ]
+        },
+        {
+          "name": "Poissons gras",
+          "variants": [
+            "Saumon",
+            "Pavé de saumon",
+            "Filet de saumon",
+            "Saumon sauvage",
+            "Truite",
+            "Filet de truite",
+            "Truite fumée",
+            "Maquereau",
+            "Sardine fraîche",
+            "Hareng",
+            "Thon frais",
+            "Pavé de thon",
+            "Espadon",
+            "Anchois frais",
+            "Anguille"
+          ]
+        },
+        {
+          "name": "Poissons fumés et salés",
+          "variants": [
+            "Saumon fumé",
+            "Maquereau fumé",
+            "Hareng fumé",
+            "Hareng mariné",
+            "Anchois à l'huile",
+            "Filets d'anchois",
+            "Morue salée",
+            "Bacalhau",
+            "Haddock fumé",
+            "Poisson séché",
+            "Œufs de poisson",
+            "Œufs de lump",
+            "Œufs de truite",
+            "Tarama"
+          ]
+        },
+        {
+          "name": "Poissons en conserve et préparés",
+          "variants": [
+            "Thon au naturel",
+            "Thon à l'huile",
+            "Thon à la tomate",
+            "Sardines à l'huile",
+            "Sardines au citron",
+            "Sardines à la tomate",
+            "Maquereaux à la moutarde",
+            "Maquereaux au vin blanc",
+            "Filets de maquereau en conserve",
+            "Saumon en conserve",
+            "anchois en conserve",
+            "Rillettes de thon",
+            "Rillettes de saumon",
+            "Rillettes de sardines",
+            "Brandade de morue",
+            "Boulettes de poisson",
+            "Poisson pané",
+            "Bâtonnets de poisson",
+            "Filets de poisson surgelés",
+            "Poisson en sauce"
+          ]
+        },
+        {
+          "name": "Crustacés",
+          "variants": [
+            "Crevette rose",
+            "Crevette grise",
+            "Crevette décortiquée",
+            "Gambas",
+            "Langoustine",
+            "Langouste",
+            "Homard",
+            "Crabe",
+            "Tourteau",
+            "Araignée de mer",
+            "Écrevisse",
+            "Chair de crabe",
+            "Chair de homard",
+            "Queues de crevettes",
+            "Crevettes surgelées",
+            "Gambas surgelées"
+          ]
+        },
+        {
+          "name": "Mollusques et coquillages",
+          "variants": [
+            "Moule",
+            "Moules décortiquées",
+            "Coque",
+            "Palourde",
+            "Praire",
+            "Telline",
+            "Huître",
+            "Saint-Jacques",
+            "Noix de Saint-Jacques",
+            "Pétoncle",
+            "Bulot",
+            "Bigorneau",
+            "Ormeau",
+            "Escargot",
+            "Calamar",
+            "Encornet",
+            "Seiche",
+            "Poulpe",
+            "Tentacules de poulpe",
+            "Anneaux de calamar",
+            "Mélange de fruits de mer"
+          ]
+        },
+        {
+          "name": "Produits de la mer préparés",
+          "variants": [
+            "Surimi",
+            "Bâtonnets de surimi",
+            "miettes de surimi",
+            "Salade de fruits de mer",
+            "Cocktail de crevettes",
+            "Moules marinières préparées",
+            "Beignets de calamars",
+            "Calamars farcis",
+            "Raviolis aux crevettes",
+            "Nems aux crevettes",
+            "Accras de morue",
+            "Croquettes de poisson",
+            "Terrine de poisson",
+            "Soupe de poisson",
+            "Bisque de homard",
+            "Fumet de poisson",
+            "Bouillon de poisson"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Œufs et ovoproduits",
+      "ingredients": [
+        {
+          "name": "Œufs de poule",
+          "variants": [
+            "Œuf de poule",
+            "Œuf de poule plein air",
+            "Œuf de poule bio",
+            "Œuf de poule élevé au sol",
+            "Œuf de poule extra-frais",
+            "Œuf de poule gros calibre",
+            "Œuf de poule petit calibre",
+            "Œuf dur",
+            "Œuf mollet",
+            "Œuf poché",
+            "Œuf brouillé",
+            "Œuf au plat",
+            "Œuf cocotte"
+          ]
+        },
+        {
+          "name": "Autres œufs",
+          "variants": [
+            "Œuf de caille",
+            "Œuf de canard",
+            "Œuf d'oie",
+            "Œuf d'autruche"
+          ]
+        },
+        {
+          "name": "Blancs et jaunes d'œufs",
+          "variants": [
+            "Blanc d'œuf",
+            "Jaune d'œuf",
+            "Blancs d'œufs liquides",
+            "Jaunes d'œufs liquides",
+            "Œufs entiers liquides",
+            "Blanc d'œuf en poudre",
+            "Jaune d'œuf en poudre",
+            "Œuf entier en poudre"
+          ]
+        },
+        {
+          "name": "Préparations à base d'œufs",
+          "variants": [
+            "Omelette nature",
+            "Omelette aux fines herbes",
+            "Œufs mimosa",
+            "Œufs mayonnaise",
+            "Œufs brouillés préparés",
+            "Mélange pour omelette"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Protéines végétales et substituts",
+      "ingredients": [
+        {
+          "name": "Tofu",
+          "variants": [
+            "Tofu nature",
+            "Tofu ferme",
+            "Tofu soyeux",
+            "Tofu fumé",
+            "Tofu lactofermenté",
+            "Tofu aux herbes",
+            "Tofu mariné",
+            "Tofu grillé",
+            "Tofu aromatisé"
+          ]
+        },
+        {
+          "name": "Tempeh",
+          "variants": [
+            "Tempeh nature",
+            "Tempeh fumé",
+            "Tempeh mariné"
+          ]
+        },
+        {
+          "name": "Seitan",
+          "variants": [
+            "Seitan nature",
+            "Seitan fumé",
+            "Seitan mariné",
+            "Émincé de seitan",
+            "Seitan haché"
+          ]
+        },
+        {
+          "name": "Protéines de soja",
+          "variants": [
+            "Protéines de soja texturées",
+            "Protéines de soja fines",
+            "Protéines de soja grosses",
+            "Granulés de soja",
+            "Émincés de soja",
+            "Dés de soja",
+            "Protéines de soja déshydratées"
+          ]
+        },
+        {
+          "name": "Substituts végétaux de viande",
+          "variants": [
+            "Steak végétal",
+            "Steak de soja",
+            "Steak de pois",
+            "Steak de blé",
+            "Haché végétal",
+            "Émincé végétal",
+            "Boulettes végétales",
+            "Saucisse végétale",
+            "Chipolata végétale",
+            "Merguez végétale",
+            "Nuggets végétaux",
+            "Escalope végétale",
+            "Filet végétal",
+            "Lardons végétaux",
+            "Bacon végétal",
+            "Jambon végétal",
+            "Charcuterie végétale",
+            "Substitut végétal de poulet",
+            "Substitut végétal de bœuf"
+          ]
+        },
+        {
+          "name": "Préparations végétales",
+          "variants": [
+            "Falafel",
+            "Galette de légumes et légumineuses",
+            "Boulettes de lentilles",
+            "Boulettes de pois chiches",
+            "Galette de pois chiches",
+            "Galette de haricots",
+            "Préparation végétale pour burger",
+            "Farce végétale",
+            "Protéines végétales cuisinées"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Légumineuses sèches et conserves",
+      "ingredients": [
+        {
+          "name": "Lentilles",
+          "variants": [
+            "Lentilles vertes",
+            "Lentilles blondes",
+            "Lentilles brunes",
+            "Lentilles corail",
+            "Lentilles noires beluga",
+            "Lentilles jaunes",
+            "Lentilles en conserve",
+            "Lentilles cuites sous vide"
+          ]
+        },
+        {
+          "name": "Pois chiches",
+          "variants": [
+            "Pois chiches secs",
+            "Pois chiches en conserve",
+            "Pois chiches cuits sous vide",
+            "Flocons de pois chiches"
+          ]
+        },
+        {
+          "name": "Haricots secs",
+          "variants": [
+            "Haricots blancs secs",
+            "Haricots rouges secs",
+            "Haricots noirs secs",
+            "Haricots azuki secs",
+            "Haricots mungo secs",
+            "Haricots coco secs",
+            "Haricots tarbais secs",
+            "Haricots lingots secs",
+            "Haricots pinto secs",
+            "Haricots blancs en conserve",
+            "Haricots rouges en conserve",
+            "Haricots noirs en conserve",
+            "Haricots blancs cuits sous vide",
+            "Haricots rouges cuits sous vide"
+          ]
+        },
+        {
+          "name": "Pois secs",
+          "variants": [
+            "Pois cassés verts",
+            "Pois cassés jaunes",
+            "Pois secs entiers",
+            "Pois secs en conserve"
+          ]
+        },
+        {
+          "name": "Fèves sèches",
+          "variants": [
+            "Fèves sèches décortiquées",
+            "Fèves cuites en conserve"
+          ]
+        },
+        {
+          "name": "Légumineuses préparées",
+          "variants": [
+            "Dahl de lentilles",
+            "Houmous nature",
+            "Houmous aux poivrons",
+            "Houmous aux betteraves",
+            "Purée de pois cassés",
+            "Purée de haricots blancs",
+            "Falafels de pois chiches",
+            "Mélange de légumineuses cuites",
+            "Mélange de lentilles et céréales"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Noix, fruits à coque et graines",
+      "ingredients": [
+        {
+          "name": "Amandes",
+          "variants": [
+            "Amandes entières",
+            "Amandes émondées",
+            "Amandes effilées",
+            "Amandes concassées",
+            "Amandes en poudre",
+            "Amandes grillées",
+            "Amandes blanchies",
+            "Purée d'amandes",
+            "Beurre d'amandes"
+          ]
+        },
+        {
+          "name": "Noisettes",
+          "variants": [
+            "Noisettes entières",
+            "Noisettes décortiquées",
+            "Noisettes concassées",
+            "Noisettes en poudre",
+            "Noisettes grillées",
+            "Purée de noisettes",
+            "Praliné de noisette"
+          ]
+        },
+        {
+          "name": "Noix",
+          "variants": [
+            "Noix de Grenoble",
+            "Noix de pécan",
+            "Noix de macadamia",
+            "Noix du Brésil",
+            "Noix de cajou",
+            "Noix de cajou grillées",
+            "Noix de cajou concassées",
+            "Noix de cajou en purée",
+            "Noix de pin",
+            "Noix de kola"
+          ]
+        },
+        {
+          "name": "Pistaches",
+          "variants": [
+            "Pistaches entières",
+            "Pistaches décortiquées",
+            "Pistaches non salées",
+            "Pistaches salées",
+            "Pistaches concassées",
+            "Pistaches en poudre",
+            "Pâte de pistache"
+          ]
+        },
+        {
+          "name": "Cacahuètes",
+          "variants": [
+            "Cacahuètes nature",
+            "Cacahuètes grillées",
+            "Cacahuètes salées",
+            "Cacahuètes concassées",
+            "Beurre de cacahuètes",
+            "Purée de cacahuètes"
+          ]
+        },
+        {
+          "name": "Graines de sésame",
+          "variants": [
+            "Graines de sésame blond",
+            "Graines de sésame noir",
+            "Graines de sésame grillées",
+            "Tahini",
+            "Pâte de sésame"
+          ]
+        },
+        {
+          "name": "Graines de courge",
+          "variants": [
+            "Graines de courge nature",
+            "Graines de courge grillées",
+            "Graines de courge décortiquées"
+          ]
+        },
+        {
+          "name": "Graines de tournesol",
+          "variants": [
+            "Graines de tournesol nature",
+            "Graines de tournesol grillées",
+            "Graines de tournesol décortiquées"
+          ]
+        },
+        {
+          "name": "Graines de lin",
+          "variants": [
+            "Graines de lin brun",
+            "Graines de lin doré",
+            "Graines de lin moulues"
+          ]
+        },
+        {
+          "name": "Graines de chia",
+          "variants": [
+            "Graines de chia noires",
+            "Graines de chia blanches"
+          ]
+        },
+        {
+          "name": "Autres graines",
+          "variants": [
+            "Graines de pavot",
+            "Graines de chanvre décortiquées",
+            "Graines de nigelle",
+            "Graines de fenouil",
+            "Graines de moutarde",
+            "Graines de cumin",
+            "Graines de coriandre",
+            "Graines de carvi",
+            "Graines de courge moulues"
+          ]
+        },
+        {
+          "name": "Mélanges de noix et graines",
+          "variants": [
+            "Mélange de noix",
+            "Mélange apéritif de fruits à coque",
+            "Mélange de graines",
+            "Mélange de graines pour salade",
+            "Mélange de noix et fruits secs"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Huiles, matières grasses et vinaigres",
+      "ingredients": [
+        {
+          "name": "Huiles végétales",
+          "variants": [
+            "Huile d'olive vierge extra",
+            "Huile d'olive vierge",
+            "Huile d'olive raffinée",
+            "Huile d'olive douce",
+            "Huile d'olive aromatisée",
+            "Huile de tournesol",
+            "Huile de tournesol oléique",
+            "Huile de colza",
+            "Huile de noix",
+            "Huile de noisette",
+            "Huile d'amande",
+            "Huile de sésame",
+            "Huile de sésame grillé",
+            "Huile d'arachide",
+            "Huile de pépins de raisin",
+            "Huile de maïs",
+            "Huile de soja",
+            "Huile de lin",
+            "Huile de chanvre",
+            "Huile de cameline",
+            "Huile de pépins de courge",
+            "Huile de coco vierge",
+            "Huile de coco désodorisée",
+            "Huile de palme",
+            "Huile de palmiste",
+            "Huile d'avocat",
+            "Huile de macadamia",
+            "Huile de pistache",
+            "Huile de riz",
+            "Huile de carthame",
+            "Huile de moutarde",
+            "Huile de pépins de courge grillés"
+          ]
+        },
+        {
+          "name": "Matières grasses animales",
+          "variants": [
+            "Saindoux",
+            "Graisse de canard",
+            "Graisse d'oie",
+            "Suif de bœuf",
+            "Graisse de porc",
+            "Ghee"
+          ]
+        },
+        {
+          "name": "Matières grasses végétales et tartinables",
+          "variants": [
+            "Matière grasse végétale à cuire",
+            "Matière grasse végétale à tartiner",
+            "Crème végétale à cuire",
+            "Crème végétale à fouetter"
+          ]
+        },
+        {
+          "name": "Vinaigres",
+          "variants": [
+            "Vinaigre de vin rouge",
+            "Vinaigre de vin blanc",
+            "Vinaigre de cidre",
+            "Vinaigre balsamique",
+            "Vinaigre balsamique blanc",
+            "Vinaigre de riz",
+            "Vinaigre de riz assaisonné",
+            "Vinaigre de Xérès",
+            "Vinaigre de malt",
+            "Vinaigre d'alcool blanc",
+            "Vinaigre de bière",
+            "Vinaigre de champagne",
+            "Vinaigre de framboise",
+            "Vinaigre de miel",
+            "Vinaigre de noix",
+            "Vinaigre de tomate",
+            "Vinaigre de coco",
+            "Vinaigre de datte",
+            "Vinaigre de kombucha"
+          ]
+        },
+        {
+          "name": "Préparations et assaisonnements à base d'huile",
+          "variants": [
+            "Huile pimentée",
+            "Huile à l'ail",
+            "Huile aux herbes",
+            "Huile à la truffe",
+            "Huile au basilic",
+            "Huile au citron",
+            "Huile infusée au romarin",
+            "Huile de friture",
+            "Mélange d'huiles pour cuisson",
+            "Vinaigrette nature",
+            "Vinaigrette balsamique",
+            "Vinaigrette moutarde",
+            "Vinaigrette allégée",
+            "Sauce salade à l'huile"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Herbes aromatiques",
+      "ingredients": [
+        {
+          "name": "Basilic",
+          "variants": [
+            "Basilic frais",
+            "Basilic séché",
+            "Basilic surgelé",
+            "Basilic thaï"
+          ]
+        },
+        {
+          "name": "Persil",
+          "variants": [
+            "Persil plat",
+            "Persil frisé",
+            "Persil frais",
+            "Persil séché",
+            "Persil surgelé"
+          ]
+        },
+        {
+          "name": "Thym",
+          "variants": [
+            "Thym frais",
+            "Thym séché",
+            "Thym citron"
+          ]
+        },
+        {
+          "name": "Romarin",
+          "variants": [
+            "Romarin frais",
+            "Romarin séché"
+          ]
+        },
+        {
+          "name": "Coriandre",
+          "variants": [
+            "Coriandre fraîche",
+            "Coriandre séchée",
+            "Feuilles de coriandre surgelées"
+          ]
+        },
+        {
+          "name": "Menthe",
+          "variants": [
+            "Menthe fraîche",
+            "Menthe séchée",
+            "Menthe poivrée"
+          ]
+        },
+        {
+          "name": "Origan",
+          "variants": [
+            "Origan frais",
+            "Origan séché"
+          ]
+        },
+        {
+          "name": "Ciboulette séchée",
+          "variants": [
+            "Ciboulette lyophilisée"
+          ]
+        },
+        {
+          "name": "Aneth",
+          "variants": [
+            "Aneth frais",
+            "Aneth séché"
+          ]
+        },
+        {
+          "name": "Estragon",
+          "variants": [
+            "Estragon frais",
+            "Estragon séché"
+          ]
+        },
+        {
+          "name": "Sauge",
+          "variants": [
+            "Sauge fraîche",
+            "Sauge séchée"
+          ]
+        },
+        {
+          "name": "Laurier",
+          "variants": [
+            "Feuilles de laurier fraîches",
+            "Feuilles de laurier séchées"
+          ]
+        },
+        {
+          "name": "Marjolaine",
+          "variants": [
+            "Marjolaine fraîche",
+            "Marjolaine séchée"
+          ]
+        },
+        {
+          "name": "Sarriette",
+          "variants": [
+            "Sarriette fraîche",
+            "Sarriette séchée"
+          ]
+        },
+        {
+          "name": "Cerfeuil",
+          "variants": [
+            "Cerfeuil frais",
+            "Cerfeuil séché"
+          ]
+        },
+        {
+          "name": "Herbes aromatiques diverses",
+          "variants": [
+            "Mélange de fines herbes",
+            "Herbes de Provence",
+            "Bouquet garni",
+            "Herbes fraîches mélangées",
+            "Herbes surgelées mélangées"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Épices et aromates moulus ou entiers",
+      "ingredients": [
+        {
+          "name": "Poivres",
+          "variants": [
+            "Poivre noir en grains",
+            "Poivre noir moulu",
+            "Poivre blanc en grains",
+            "Poivre blanc moulu",
+            "Poivre vert",
+            "Poivre rouge",
+            "Poivre long",
+            "Poivre de Sichuan",
+            "Poivre de Timut",
+            "Poivre rose"
+          ]
+        },
+        {
+          "name": "Piments et paprika",
+          "variants": [
+            "Paprika doux",
+            "Paprika fumé",
+            "Paprika fort",
+            "Piment de Cayenne",
+            "Piment en poudre",
+            "Flocons de piment",
+            "Piment d'Espelette",
+            "Piment chipotle",
+            "Piment ancho",
+            "Piment oiseau séché"
+          ]
+        },
+        {
+          "name": "Cumin",
+          "variants": [
+            "Cumin en graines",
+            "Cumin moulu"
+          ]
+        },
+        {
+          "name": "Coriandre en épice",
+          "variants": [
+            "Coriandre en graines",
+            "Coriandre moulue"
+          ]
+        },
+        {
+          "name": "Cannelle",
+          "variants": [
+            "Bâtons de cannelle",
+            "Cannelle moulue"
+          ]
+        },
+        {
+          "name": "Gingembre en épice",
+          "variants": [
+            "Gingembre moulu",
+            "Gingembre en poudre"
+          ]
+        },
+        {
+          "name": "Curcuma en épice",
+          "variants": [
+            "Curcuma moulu",
+            "Curcuma en poudre"
+          ]
+        },
+        {
+          "name": "Muscade",
+          "variants": [
+            "Noix de muscade entière",
+            "Muscade moulue"
+          ]
+        },
+        {
+          "name": "Clou de girofle",
+          "variants": [
+            "Clous de girofle entiers",
+            "Clou de girofle moulu"
+          ]
+        },
+        {
+          "name": "Cardamome",
+          "variants": [
+            "Cardamome verte en gousses",
+            "Cardamome noire",
+            "Cardamome moulue"
+          ]
+        },
+        {
+          "name": "Fenouil en épice",
+          "variants": [
+            "Fenouil en graines",
+            "Fenouil moulu"
+          ]
+        },
+        {
+          "name": "Fenugrec",
+          "variants": [
+            "Graines de fenugrec",
+            "Fenugrec moulu"
+          ]
+        },
+        {
+          "name": "Moutarde en graines",
+          "variants": [
+            "Graines de moutarde jaune",
+            "Graines de moutarde brune",
+            "Graines de moutarde noire"
+          ]
+        },
+        {
+          "name": "Anis et badiane",
+          "variants": [
+            "Anis vert en graines",
+            "Anis étoilé",
+            "Badiane moulue"
+          ]
+        },
+        {
+          "name": "Safran",
+          "variants": [
+            "Safran en pistils",
+            "Safran moulu"
+          ]
+        },
+        {
+          "name": "Vanille",
+          "variants": [
+            "Gousse de vanille",
+            "Vanille en poudre",
+            "Extrait de vanille",
+            "Pâte de vanille"
+          ]
+        },
+        {
+          "name": "Autres épices",
+          "variants": [
+            "Baies de genièvre",
+            "Graines de céleri",
+            "Macis",
+            "Sumac",
+            "Paprika en flocons",
+            "Racine de galanga séchée",
+            "Zaatar nature"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mélanges d'épices et assaisonnements",
+      "ingredients": [
+        {
+          "name": "Curry",
+          "variants": [
+            "Curry doux",
+            "Curry fort",
+            "Curry madras",
+            "Curry japonais",
+            "Curry vert",
+            "Curry rouge",
+            "Pâte de curry jaune",
+            "Pâte de curry vert",
+            "Pâte de curry rouge"
+          ]
+        },
+        {
+          "name": "Mélanges d'épices du Maghreb et du Moyen-Orient",
+          "variants": [
+            "Ras el hanout",
+            "Harissa en poudre",
+            "Harissa en pâte",
+            "Baharat",
+            "Dukkah",
+            "Zaatar"
+          ]
+        },
+        {
+          "name": "Mélanges d'épices asiatiques",
+          "variants": [
+            "Cinq-épices chinois",
+            "Mélange pour wok",
+            "Mélange pour pho",
+            "Mélange pour tandoori",
+            "Garam masala"
+          ]
+        },
+        {
+          "name": "Mélanges d'épices européens",
+          "variants": [
+            "Épices pour couscous",
+            "Épices pour paella",
+            "Épices pour barbecue",
+            "Épices pour grillades",
+            "Épices pour pommes de terre",
+            "Épices pour poulet",
+            "Épices pour poisson",
+            "Mélange quatre-épices",
+            "Mélange pour pain d'épices"
+          ]
+        },
+        {
+          "name": "Assaisonnements en poudre",
+          "variants": [
+            "Bouillon de légumes en poudre",
+            "Bouillon de volaille en poudre",
+            "Bouillon de bœuf en poudre",
+            "Fond de veau en poudre",
+            "Aromates pour court-bouillon",
+            "Assaisonnement umami",
+            "Levure maltée"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sauces froides et condiments",
+      "ingredients": [
+        {
+          "name": "Mayonnaise",
+          "variants": [
+            "Mayonnaise classique",
+            "Mayonnaise légère",
+            "Mayonnaise à l’huile d’olive",
+            "Mayonnaise à l’ail",
+            "Mayonnaise citronnée",
+            "Mayonnaise épicée",
+            "Mayonnaise vegan",
+            "Aïoli",
+            "Sauce rémoulade",
+            "Sauce tartare",
+            "Sauce cocktail",
+            "Sauce burger"
+          ]
+        },
+        {
+          "name": "Moutarde",
+          "variants": [
+            "Moutarde de Dijon",
+            "Moutarde à l’ancienne",
+            "Moutarde douce",
+            "Moutarde forte",
+            "Moutarde au miel",
+            "Moutarde à l’estragon",
+            "Moutarde violette",
+            "Moutarde en grains",
+            "Moutarde en poudre"
+          ]
+        },
+        {
+          "name": "Ketchup",
+          "variants": [
+            "Ketchup classique",
+            "Ketchup allégé",
+            "Ketchup épicé",
+            "Ketchup fumé",
+            "Ketchup sans sucres ajoutés"
+          ]
+        },
+        {
+          "name": "Sauce barbecue",
+          "variants": [
+            "Sauce barbecue classique",
+            "Sauce barbecue fumée",
+            "Sauce barbecue au miel",
+            "Sauce barbecue épicée",
+            "Sauce barbecue blanche",
+            "Sauce barbecue coréenne"
+          ]
+        },
+        {
+          "name": "Sauces piquantes",
+          "variants": [
+            "Sauce pimentée type Tabasco",
+            "Sauce sriracha",
+            "Sauce habanero",
+            "Sauce piment fumé",
+            "Sauce chili douce",
+            "Sauce chili forte",
+            "Sauce piri-piri",
+            "Sauce buffalo"
+          ]
+        },
+        {
+          "name": "Sauces pour salades",
+          "variants": [
+            "Vinaigrette classique",
+            "Vinaigrette moutardée",
+            "Vinaigrette au miel",
+            "Vinaigrette César",
+            "Sauce César",
+            "Sauce ranch",
+            "Sauce au yaourt",
+            "Sauce salade légère",
+            "Sauce salade asiatique"
+          ]
+        },
+        {
+          "name": "Sauces pour sandwichs et burgers",
+          "variants": [
+            "Sauce biggy",
+            "Sauce andalouse",
+            "Sauce américaine",
+            "Sauce kebab",
+            "Sauce pita",
+            "Sauce samouraï",
+            "Sauce poivre",
+            "Sauce cheddar"
+          ]
+        },
+        {
+          "name": "Pickles et condiments au vinaigre",
+          "variants": [
+            "Oignons grelots au vinaigre",
+            "Oignons rouges pickles",
+            "Pickles de légumes",
+            "Pickles de concombre",
+            "Relish de concombre",
+            "Relish de tomates",
+            "Légumes aigres-doux",
+            "Gingembre mariné",
+            "Piment au vinaigre"
+          ]
+        },
+        {
+          "name": "Olives et préparations d’olives",
+          "variants": [
+            "Olives vertes dénoyautées",
+            "Olives noires dénoyautées",
+            "Olives Kalamata",
+            "Olives farcies",
+            "Olives marinées",
+            "Tapenade verte",
+            "Tapenade noire",
+            "Crème d’olives"
+          ]
+        },
+        {
+          "name": "Câpres et condiments salés",
+          "variants": [
+            "Câpres au vinaigre",
+            "Câpres au sel",
+            "Queues de câpres",
+            "Cornichons aigres-doux",
+            "Petits oignons au vinaigre"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sauces de cuisson et sauces du monde",
+      "ingredients": [
+        {
+          "name": "Sauce tomate",
+          "variants": [
+            "Passata de tomate",
+            "Sauce tomate nature",
+            "Sauce tomate aux herbes",
+            "Sauce tomate à l’ail",
+            "Sauce tomate aux olives",
+            "Sauce tomate aux légumes",
+            "Sauce tomate arrabbiata",
+            "Sauce tomate pour pizza",
+            "Sauce tomate cuisinée"
+          ]
+        },
+        {
+          "name": "Pesto",
+          "variants": [
+            "Pesto alla genovese",
+            "Pesto rosso",
+            "Pesto de roquette",
+            "Pesto d’épinards",
+            "Pesto de pistache",
+            "Pesto vegan",
+            "Pistou"
+          ]
+        },
+        {
+          "name": "Sauce soja",
+          "variants": [
+            "Sauce soja salée",
+            "Sauce soja réduite en sel",
+            "Sauce soja sucrée",
+            "Sauce soja claire",
+            "Sauce soja foncée",
+            "Tamari",
+            "Shoyu"
+          ]
+        },
+        {
+          "name": "Sauces asiatiques de cuisson",
+          "variants": [
+            "Sauce teriyaki",
+            "Sauce yakitori",
+            "Sauce hoisin",
+            "Sauce aux huîtres",
+            "Sauce poisson",
+            "Sauce nuoc-mâm",
+            "Sauce ponzu",
+            "Sauce satay",
+            "Sauce aigre-douce",
+            "Sauce aigre-piquante",
+            "Sauce pour nems",
+            "Sauce pour wok",
+            "Sauce aux haricots noirs",
+            "Sauce doubanjiang"
+          ]
+        },
+        {
+          "name": "Pâtes et condiments fermentés",
+          "variants": [
+            "Pâte miso blanche",
+            "Pâte miso rouge",
+            "Pâte miso jaune",
+            "Miso",
+            "Gochujang",
+            "Doenjang",
+            "Sambal oelek",
+            "Pâte de tamarin",
+            "Pâte de crevettes",
+            "Pâte de curry massaman"
+          ]
+        },
+        {
+          "name": "Sauces et condiments internationaux",
+          "variants": [
+            "Sauce Worcestershire",
+            "Sauce HP",
+            "Sauce gravy",
+            "Sauce mint",
+            "Sauce chimichurri",
+            "Sauce romesco",
+            "Sauce mojo",
+            "Sauce vierge",
+            "Sauce gribiche",
+            "Sauce marchand de vin",
+            "Sauce au poivre",
+            "Sauce au bleu",
+            "Sauce forestière",
+            "Sauce madère"
+          ]
+        },
+        {
+          "name": "Préparations à base de sésame et fruits à coque",
+          "variants": [
+            "Crème de sésame",
+            "Beurre de cacahuète salé",
+            "Beurre de cacahuète crunchy",
+            "Beurre de cacahuète smooth",
+            "Crème de cajou",
+            "Crème d’amande salée"
+          ]
+        },
+        {
+          "name": "Chutneys et condiments fruités",
+          "variants": [
+            "Chutney de mangue",
+            "Chutney de tomate",
+            "Chutney d’oignon",
+            "Chutney de figue",
+            "Chutney de pomme",
+            "Confit d’oignon",
+            "Confit de figue",
+            "Confit de tomate",
+            "Gelée de piment"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bases culinaires et concentrés",
+      "ingredients": [
+        {
+          "name": "Concentrés et purées de légumes",
+          "variants": [
+            "Double concentré de tomate",
+            "Purée d’ail",
+            "Ail en purée",
+            "Purée de gingembre",
+            "Gingembre en pâte",
+            "Purée de piment",
+            "Pâte de poivron",
+            "Ajvar",
+            "Crème d’artichaut"
+          ]
+        },
+        {
+          "name": "Fonds et jus de cuisson",
+          "variants": [
+            "Fond de volaille liquide",
+            "Fond de veau liquide",
+            "Fond de bœuf liquide",
+            "Fond de légumes liquide",
+            "Fond de poisson",
+            "Jus de rôti",
+            "Jus de viande concentré",
+            "Demi-glace"
+          ]
+        },
+        {
+          "name": "Bouillons liquides et concentrés",
+          "variants": [
+            "Bouillon de légumes liquide",
+            "Bouillon de volaille liquide",
+            "Bouillon de bœuf liquide",
+            "Bouillon de poisson liquide",
+            "Bouillon miso",
+            "Bouillon pho",
+            "Bouillon ramen",
+            "Bouillon en gelée",
+            "Cube de bouillon de légumes",
+            "Cube de bouillon de volaille",
+            "Cube de bouillon de bœuf"
+          ]
+        },
+        {
+          "name": "Préparations culinaires déshydratées",
+          "variants": [
+            "Sauce béchamel déshydratée",
+            "Sauce hollandaise déshydratée",
+            "Sauce au poivre déshydratée",
+            "Sauce aux champignons déshydratée",
+            "Mélange pour sauce brune",
+            "Mélange pour sauce gravy",
+            "Mélange pour sauce fromage"
+          ]
+        }
+      ]
+    }
+  ]
+}

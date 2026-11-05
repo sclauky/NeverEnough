@@ -3,7 +3,7 @@ from fastapi import FastAPI
 
 from app.api.routes.recipes import router as recipes_router
 from app.api.routes.users import router as users_router
-
+from app.api.routes.ingredients import router as ingredients_router
 
 app = FastAPI(
     title="Never Enough API",
@@ -13,6 +13,7 @@ app = FastAPI(
 
 app.include_router(users_router)
 app.include_router(recipes_router)
+app.include_router(ingredients_router)
 
 
 @app.get("/health", tags=["Health"])

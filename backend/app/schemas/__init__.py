@@ -22,3 +22,4 @@ from app.schemas.meal_plan_entry import (
     MealPlanEntryCreate,
     MealPlanEntryPublic,
 )
+from app.schemas.ingredient import IngredientPublic
