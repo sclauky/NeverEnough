@@ -9,7 +9,7 @@ from sqlalchemy import (
     String,
     Uuid,
 )
-from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.db.base import Base
 
@@ -62,4 +62,8 @@ class RecipeIngredient(Base):
         Integer,
         default=0,
         nullable=False,
+    )
+    
+    recipe: Mapped["Recipe"] = relationship(
+        back_populates="ingredients",
     )

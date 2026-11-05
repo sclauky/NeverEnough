@@ -11,7 +11,7 @@ from sqlalchemy import (
     Uuid,
     func,
 )
-from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.db.base import Base
 
@@ -92,4 +92,16 @@ class Recipe(Base):
         server_default=func.now(),
         onupdate=func.now(),
         nullable=False,
+    )
+    
+    ingredients: Mapped[list["RecipeIngredient"]] = relationship(
+        back_populates="recipe",
+        cascade="all, delete-orphan",
+        order_by="RecipeIngredient.position",
+    )
+
+    steps: Mapped[list["RecipeStep"]] = relationship(
+        back_populates="recipe",
+        cascade="all, delete-orphan",
+        order_by="RecipeStep.position",
     )
