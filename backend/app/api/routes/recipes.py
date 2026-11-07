@@ -1,4 +1,3 @@
-
 from uuid import UUID
 
 from fastapi import APIRouter, Depends, HTTPException, Query, status
@@ -13,6 +12,7 @@ from app.models.ingredient import Ingredient
 from app.models.recipe import Recipe
 from app.models.recipe_ingredient import RecipeIngredient
 from app.models.recipe_step import RecipeStep
+from app.models.saved_recipe import SavedRecipe
 from app.models.user import User
 from app.schemas.recipe import (
     RecipeCreate,
@@ -158,6 +158,105 @@ async def get_recipes(
         RecipePublic.model_validate(recipe)
         for recipe in result.scalars().all()
     ]
+
+
+@router.get("/saved", response_model=list[RecipePublic])
+async def get_saved_recipes(
+    session: AsyncSession = Depends(get_session),
+    current_user: User = Depends(get_current_user),
+) -> list[RecipePublic]:
+    query = (
+        select(Recipe)
+        .join(SavedRecipe, SavedRecipe.recipe_id == Recipe.id)
+        .where(SavedRecipe.user_id == current_user.id)
+        .order_by(SavedRecipe.created_at.desc())
+    )
+
+    result = await session.execute(query)
+
+    return [
+        RecipePublic.model_validate(recipe)
+        for recipe in result.scalars().all()
+    ]
+
+
+@router.post(
+    "/{recipe_id}/save",
+    response_model=RecipePublic,
+    status_code=status.HTTP_201_CREATED,
+)
+async def save_recipe(
+    recipe_id: UUID,
+    session: AsyncSession = Depends(get_session),
+    current_user: User = Depends(get_current_user),
+) -> RecipePublic:
+    result = await session.execute(
+        select(Recipe).where(
+            Recipe.id == recipe_id,
+            Recipe.is_public.is_(True),
+        )
+    )
+    recipe = result.scalar_one_or_none()
+
+    if recipe is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Recipe not found.",
+        )
+
+    result = await session.execute(
+        select(SavedRecipe).where(
+            SavedRecipe.user_id == current_user.id,
+            SavedRecipe.recipe_id == recipe_id,
+        )
+    )
+
+    if result.scalar_one_or_none() is not None:
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail="Recipe already saved.",
+        )
+
+    session.add(
+        SavedRecipe(
+            user_id=current_user.id,
+            recipe_id=recipe_id,
+        )
+    )
+
+    try:
+        await session.commit()
+    except IntegrityError:
+        await session.rollback()
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail="Recipe already saved.",
+        )
+
+    return RecipePublic.model_validate(recipe)
+
+
+@router.delete(
+    "/{recipe_id}/save",
+    status_code=status.HTTP_204_NO_CONTENT,
+)
+async def unsave_recipe(
+    recipe_id: UUID,
+    session: AsyncSession = Depends(get_session),
+    current_user: User = Depends(get_current_user),
+) -> None:
+    result = await session.execute(
+        select(SavedRecipe).where(
+            SavedRecipe.user_id == current_user.id,
+            SavedRecipe.recipe_id == recipe_id,
+        )
+    )
+
+    saved_recipe = result.scalar_one_or_none()
+
+    if saved_recipe is not None:
+        await session.delete(saved_recipe)
+        await session.commit()
 
 
 @router.get("/me", response_model=list[RecipePublic])
