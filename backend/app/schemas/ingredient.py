@@ -1,8 +1,7 @@
-
 from datetime import datetime
 from uuid import UUID
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict
 
 
 class IngredientPublic(BaseModel):
@@ -11,4 +10,5 @@ class IngredientPublic(BaseModel):
     id: UUID
     name: str
     category: str | None
+    parent_id: UUID | None
     created_at: datetime
