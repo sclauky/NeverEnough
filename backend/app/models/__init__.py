@@ -17,3 +17,4 @@ from app.models.user_dietary_preference import UserDietaryPreference
 from app.models.user_allergy import UserAllergy
 from app.models.user_kitchen_equipment import UserKitchenEquipment
 from app.models.saved_recipe import SavedRecipe
+from app.models.recipe_review import RecipeReview
