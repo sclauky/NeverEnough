@@ -147,6 +147,25 @@
             "Maïs concassé",
             "Freekeh"
           ]
+        },
+        {
+          "name": "Céréales et grains complémentaires",
+          "variants": [
+            "Avoine décortiquée",
+            "Grains d'avoine",
+            "Blé tendre en grains",
+            "Blé dur en grains",
+            "Orge mondé",
+            "Orge mondé précuit",
+            "Seigle en grains",
+            "Sorgho",
+            "Teff en grains",
+            "Fonio",
+            "Kasha",
+            "Riz soufflé nature",
+            "Maïs à popcorn",
+            "Grains de maïs secs"
+          ]
         }
       ]
     },
@@ -211,6 +230,37 @@
             "Flocons de sarrasin",
             "Flocons de quinoa",
             "Flocons de seigle"
+          ]
+        },
+        {
+          "name": "Farines de légumineuses et autres végétaux",
+          "variants": [
+            "Farine de pois chiche",
+            "Farine de pois cassés",
+            "Farine de pois",
+            "Farine de haricot",
+            "Farine de fève",
+            "Farine de soja",
+            "Farine de souchet",
+            "Farine de banane verte",
+            "Farine de patate douce",
+            "Farine de pomme de terre"
+          ]
+        },
+        {
+          "name": "Préparations céréalières et chapelures",
+          "variants": [
+            "Chapelure fine",
+            "Chapelure japonaise panko",
+            "Chapelure dorée",
+            "Chapelure sans gluten",
+            "chapelure de pain complet",
+            "Semoule de maïs fine",
+            "Maïzena",
+            "Fécule de riz",
+            "Amidon de maïs",
+            "Amidon de blé",
+            "Amidon de tapioca"
           ]
         }
       ]
@@ -459,6 +509,38 @@
             "Fromage à burger",
             "Tranches de cheddar",
             "Fromage à raclette en tranches"
+          ]
+        },
+        {
+          "name": "Laits fermentés et spécialités laitières",
+          "variants": [
+            "Kéfir de lait",
+            "Lait fermenté bulgare",
+            "Lben",
+            "Lait caillé",
+            "Petit-lait",
+            "Babeurre",
+            "Lait acidifié",
+            "Crème de kéfir"
+          ]
+        },
+        {
+          "name": "Desserts glacés et crèmes laitières",
+          "variants": [
+            "Crème anglaise",
+            "Crème pâtissière",
+            "Crème diplomate",
+            "Crème mousseline",
+            "Crème au beurre",
+            "Crème brûlée prête à l'emploi",
+            "Glace à la vanille",
+            "Glace au chocolat",
+            "Glace à la fraise",
+            "Glace au caramel",
+            "Sorbet au citron",
+            "Sorbet aux fruits rouges",
+            "Crème glacée",
+            "Yaourt glacé"
           ]
         }
       ]
@@ -1387,6 +1469,21 @@
             "Farce végétale",
             "Protéines végétales cuisinées"
           ]
+        },
+        {
+          "name": "Préparations végétales réfrigérées",
+          "variants": [
+            "Émincé végétal façon poulet",
+            "Haché végétal nature",
+            "Haché végétal épicé",
+            "Saucisse végétale fumée",
+            "Boulettes végétales à la tomate",
+            "Falafels frais",
+            "Nuggets végétaux panés",
+            "Préparation végétale façon thon",
+            "Préparation végétale façon bacon",
+            "Tranches végétales façon jambon"
+          ]
         }
       ]
     },
@@ -1702,6 +1799,22 @@
             "Vinaigrette allégée",
             "Sauce salade à l'huile"
           ]
+        },
+        {
+          "name": "Huiles aromatisées et spécialisées",
+          "variants": [
+            "Huile de lin alimentaire",
+            "Huile de sésame vierge",
+            "Huile de truffe"
+          ]
+        },
+        {
+          "name": "Vinaigres et jus acidulés spécialisés",
+          "variants": [
+            "Vinaigre de cidre non filtré",
+            "Crème de balsamique",
+            "Verjus"
+          ]
         }
       ]
     },
@@ -1828,6 +1941,19 @@
             "Bouquet garni",
             "Herbes fraîches mélangées",
             "Herbes surgelées mélangées"
+          ]
+        },
+        {
+          "name": "Herbes fraîches complémentaires",
+          "variants": [
+            "Coriandre vietnamienne",
+            "Basilic citron",
+            "Oseille",
+            "Feuilles de curry",
+            "Feuilles de shiso",
+            "Feuilles de combava",
+            "Pousses d'ail",
+            "Fanes de fenouil"
           ]
         }
       ]
@@ -1978,6 +2104,27 @@
             "Paprika en flocons",
             "Racine de galanga séchée",
             "Zaatar nature"
+          ]
+        },
+        {
+          "name": "Épices et aromates complémentaires",
+          "variants": [
+            "Ail des ours séché",
+            "Oignon en poudre",
+            "Échalote en poudre",
+            "Piment gochugaru",
+            "Poivre de Kampot",
+            "Baies roses",
+            "Mélange cinq épices",
+            "Za'atar",
+            "Amchur",
+            "Asafoetida",
+            "Galanga en poudre",
+            "Fève tonka",
+            "Mahleb",
+            "Piment de la Jamaïque",
+            "Paprika fumé doux",
+            "Paprika fumé fort"
           ]
         }
       ]
@@ -2300,6 +2447,27 @@
             "Confit de tomate",
             "Gelée de piment"
           ]
+        },
+        {
+          "name": "Sauces et pâtes culinaires internationales",
+          "variants": [
+            "Sauce gochujang",
+            "Sauce bulgogi",
+            "Sauce yakiniku",
+            "Sauce tonkatsu",
+            "Sauce katsu",
+            "Sauce mole",
+            "Sauce enchilada",
+            "Sauce taco",
+            "Sauce jerk",
+            "Sauce peri-peri",
+            "Sauce harissa",
+            "Pâte de curry laksa",
+            "Concentré de tamarin",
+            "Pâte de citronnelle",
+            "Pâte de galanga",
+            "Pâte de curry japonais"
+          ]
         }
       ]
     },
@@ -2359,6 +2527,1215 @@
             "Mélange pour sauce brune",
             "Mélange pour sauce gravy",
             "Mélange pour sauce fromage"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sucres, miels et édulcorants",
+      "ingredients": [
+        {
+          "name": "Sucre blanc",
+          "variants": [
+            "Sucre semoule",
+            "Sucre en poudre",
+            "Sucre glace",
+            "Sucre en morceaux",
+            "Sucre extra-fin",
+            "Sucre perlé",
+            "Sucre gélifiant",
+            "Sucre à confiture",
+            "Sucre vanillé"
+          ]
+        },
+        {
+          "name": "Sucres bruns et complets",
+          "variants": [
+            "Cassonade",
+            "Vergeoise blonde",
+            "Vergeoise brune",
+            "Sucre roux de canne",
+            "Sucre complet de canne",
+            "Sucre muscovado",
+            "Sucre demerara",
+            "Sucre turbinado",
+            "Sucre de coco",
+            "Sucre de datte"
+          ]
+        },
+        {
+          "name": "Miel",
+          "variants": [
+            "Miel toutes fleurs",
+            "Miel d'acacia",
+            "Miel de lavande",
+            "Miel de châtaignier",
+            "Miel de thym",
+            "Miel de romarin",
+            "Miel de sapin",
+            "Miel de montagne",
+            "Miel de forêt",
+            "Miel de manuka",
+            "Miel crémeux"
+          ]
+        },
+        {
+          "name": "Sirops sucrants",
+          "variants": [
+            "Sirop d'érable",
+            "Sirop d'agave",
+            "Sirop de riz",
+            "Sirop de glucose",
+            "Sirop de glucose-fructose",
+            "Sirop de maïs",
+            "Sirop de datte",
+            "Sirop de yacon",
+            "Sirop de canne",
+            "Sirop de sucre inverti",
+            "Mélasse",
+            "Mélasse noire"
+          ]
+        },
+        {
+          "name": "Édulcorants",
+          "variants": [
+            "Stévia",
+            "Sucralose",
+            "Aspartame",
+            "Saccharine",
+            "Acésulfame-K",
+            "Érythritol",
+            "Xylitol",
+            "Maltitol",
+            "Sorbitol",
+            "Isomalt",
+            "Édulcorant liquide",
+            "Édulcorant en poudre",
+            "Édulcorant spécial cuisson"
+          ]
+        },
+        {
+          "name": "Sirops aromatisés",
+          "variants": [
+            "Sirop de grenadine",
+            "Sirop de menthe",
+            "Sirop de vanille",
+            "Sirop de caramel",
+            "Sirop de noisette",
+            "Sirop d'orgeat",
+            "Sirop de fleur de sureau",
+            "Sirop de rose",
+            "Sirop de gingembre"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Confitures et préparations fruitées sucrées",
+      "ingredients": [
+        {
+          "name": "Confitures",
+          "variants": [
+            "Confiture de fraise",
+            "Confiture de framboise",
+            "Confiture d'abricot",
+            "Confiture de pêche",
+            "Confiture de cerise",
+            "Confiture de myrtille",
+            "Confiture de mûre",
+            "Confiture de groseille",
+            "Confiture de cassis",
+            "Confiture d'orange",
+            "Marmelade d'orange",
+            "Confiture de figue",
+            "Confiture de prune",
+            "Confiture de mirabelle",
+            "Confiture de rhubarbe",
+            "Confiture de tomate",
+            "Confiture de lait"
+          ]
+        },
+        {
+          "name": "Gelées de fruits",
+          "variants": [
+            "Gelée de coing",
+            "Gelée de pomme",
+            "Gelée de groseille",
+            "Gelée de cassis",
+            "Gelée de mûre",
+            "Gelée de framboise",
+            "Gelée de raisin",
+            "Gelée de fleurs"
+          ]
+        },
+        {
+          "name": "Compotes et purées sucrées",
+          "variants": [
+            "Compote de pomme",
+            "Compote de poire",
+            "Compote pomme-banane",
+            "Compote pomme-fraise",
+            "Compote sans sucres ajoutés",
+            "Purée de pomme",
+            "Purée de fruits rouges",
+            "Purée de mangue",
+            "Purée de framboise",
+            "Pulpe de fruits sucrée"
+          ]
+        },
+        {
+          "name": "Préparations fruitées",
+          "variants": [
+            "Fourrage fruité",
+            "Coulis de fruits sucré",
+            "Nappage aux fruits",
+            "Pâte de coing",
+            "Pâte de fruits"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chocolats, cacao et confiseries",
+      "ingredients": [
+        {
+          "name": "Chocolat noir",
+          "variants": [
+            "Chocolat noir pâtissier",
+            "Chocolat noir dessert",
+            "Chocolat noir 50 %",
+            "Chocolat noir 60 %",
+            "Chocolat noir 70 %",
+            "Chocolat noir 85 %",
+            "Chocolat noir de couverture",
+            "Chocolat noir en pistoles",
+            "Chocolat noir en pépites",
+            "Chocolat noir râpé"
+          ]
+        },
+        {
+          "name": "Chocolat au lait",
+          "variants": [
+            "Chocolat au lait pâtissier",
+            "Chocolat au lait dessert",
+            "Chocolat au lait de couverture",
+            "Chocolat au lait en pistoles",
+            "Chocolat au lait en pépites"
+          ]
+        },
+        {
+          "name": "Chocolat blanc",
+          "variants": [
+            "Chocolat blanc pâtissier",
+            "Chocolat blanc de couverture",
+            "Chocolat blanc en pistoles",
+            "Chocolat blanc en pépites"
+          ]
+        },
+        {
+          "name": "Cacao",
+          "variants": [
+            "Cacao en poudre non sucré",
+            "Cacao maigre en poudre",
+            "Cacao sucré en poudre",
+            "Grué de cacao",
+            "Fèves de cacao concassées",
+            "Pâte de cacao",
+            "Beurre de cacao"
+          ]
+        },
+        {
+          "name": "Pâtes et crèmes sucrées",
+          "variants": [
+            "Praliné",
+            "Pâte à tartiner chocolat-noisette",
+            "Pâte à tartiner chocolat noir",
+            "Pâte à tartiner chocolat blanc",
+            "Pâte à tartiner chocolat-caramel",
+            "Crème de marrons",
+            "Crème de spéculoos",
+            "Pâte de spéculoos",
+            "Pâte de praliné",
+            "Pâte d'amande",
+            "Pâte de pistache sucrée"
+          ]
+        },
+        {
+          "name": "Caramel et confiseries",
+          "variants": [
+            "Caramel liquide",
+            "Caramel au beurre salé",
+            "Caramel tendre",
+            "Caramel dur",
+            "Sauce caramel",
+            "Nappage caramel",
+            "Guimauves",
+            "Mini-guimauves",
+            "Caramels mous",
+            "Bonbons gélifiés",
+            "Pralines roses",
+            "Nougat tendre",
+            "Nougat dur"
+          ]
+        },
+        {
+          "name": "Décors et garnitures sucrées",
+          "variants": [
+            "Copeaux de chocolat",
+            "Vermicelles en chocolat",
+            "Pépites de caramel",
+            "Pralin concassé",
+            "Perles de sucre",
+            "Vermicelles colorés",
+            "Décors sucrés",
+            "Amandes caramélisées",
+            "Noix caramélisées"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pains, biscuits et produits de boulangerie",
+      "ingredients": [
+        {
+          "name": "Pains courants",
+          "variants": [
+            "Pain de mie",
+            "Pain complet",
+            "Pain aux céréales",
+            "Pain de campagne",
+            "Pain de seigle",
+            "Pain au levain",
+            "Pain pita",
+            "Pain naan",
+            "Pain burger",
+            "Pain hot-dog",
+            "Pain à bagel",
+            "Pain lavash",
+            "Pain suédois"
+          ]
+        },
+        {
+          "name": "Pains et pâtes croustillants",
+          "variants": [
+            "Biscotte",
+            "Pain grillé",
+            "Croûtons",
+            "Chapelure",
+            "Panko",
+            "Chapelure japonaise",
+            "Pain azyme",
+            "Gressins",
+            "Bruschetta grillée"
+          ]
+        },
+        {
+          "name": "Biscuits secs",
+          "variants": [
+            "Petit-beurre",
+            "Spéculoos",
+            "Biscuit sablé",
+            "Palet breton",
+            "Langue de chat",
+            "Biscuit cuillère",
+            "Boudoir",
+            "Biscuit à la cuillère",
+            "Biscuit digestif",
+            "Graham crackers",
+            "Biscuit type Oreo",
+            "Biscuit au gingembre"
+          ]
+        },
+        {
+          "name": "Crackers et biscuits salés",
+          "variants": [
+            "Crackers nature",
+            "Crackers aux graines",
+            "Crackers au fromage",
+            "TUC",
+            "Ritz",
+            "Bretzels",
+            "Mini-bretzels",
+            "Biscuits apéritifs salés",
+            "Tuiles salées",
+            "Galettes de riz soufflé salées"
+          ]
+        },
+        {
+          "name": "Pâtes et fonds de pâtisserie",
+          "variants": [
+            "Pâte feuilletée",
+            "Pâte brisée",
+            "Pâte sablée",
+            "Pâte à pizza",
+            "Pâte à pain",
+            "Pâte filo",
+            "Feuilles de brick",
+            "Feuilles de riz",
+            "Fond de tarte sucré",
+            "Fond de tarte salé",
+            "Coques de tartelettes"
+          ]
+        },
+        {
+          "name": "Pâtes et feuilles salées prêtes à l'emploi",
+          "variants": [
+            "Pâte à pizza fraîche",
+            "Pâte à pizza épaisse",
+            "Pâte à pizza fine",
+            "Pâte à focaccia",
+            "Pâte à naan",
+            "Pâte à pita",
+            "Feuilles de wonton",
+            "Feuilles pour rouleaux de printemps",
+            "Feuilles de lasagnes fraîches",
+            "Feuilles de lasagnes sèches",
+            "Pâte à ravioli",
+            "Pâte à gyoza",
+            "Pâte à dumplings",
+            "Pâte à empanadas",
+            "Pâte à samoussas",
+            "Pâte feuilletée pur beurre",
+            "Pâte brisée pur beurre",
+            "Pâte sablée pur beurre",
+            "Pâte à tarte sans gluten"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Snacks, chips et céréales de petit-déjeuner",
+      "ingredients": [
+        {
+          "name": "Chips et snacks de pommes de terre",
+          "variants": [
+            "Chips nature",
+            "Chips ondulées",
+            "Chips barbecue",
+            "Chips paprika",
+            "Chips vinaigre",
+            "Chips tortilla",
+            "Chips de légumes",
+            "Chips de patate douce",
+            "Pommes de terre soufflées",
+            "Tuiles apéritives"
+          ]
+        },
+        {
+          "name": "Tortillas et snacks de maïs",
+          "variants": [
+            "Tortillas chips nature",
+            "Nachos",
+            "Tortillas de maïs",
+            "Tortillas de blé",
+            "Coques à tacos",
+            "Chips de maïs",
+            "Pop-corn nature",
+            "Pop-corn sucré",
+            "Pop-corn salé"
+          ]
+        },
+        {
+          "name": "Céréales de petit-déjeuner",
+          "variants": [
+            "Corn flakes nature",
+            "Corn flakes au miel",
+            "Pétales de maïs sucrés",
+            "Céréales chocolatées",
+            "Céréales fourrées",
+            "Muesli croustillant",
+            "Granola",
+            "Flocons d'avoine instantanés",
+            "Riz soufflé",
+            "Blé soufflé",
+            "Billes de céréales chocolatées",
+            "Céréales multigrains"
+          ]
+        },
+        {
+          "name": "Barres et garnitures céréalières",
+          "variants": [
+            "Barre de céréales nature",
+            "Barre de céréales au chocolat",
+            "Barre de céréales aux fruits",
+            "Granola en pépites",
+            "Muesli aux fruits secs",
+            "Mélange étudiant",
+            "Mélange apéritif salé"
+          ]
+        },
+        {
+          "name": "Snacks salés divers",
+          "variants": [
+            "Bretzels apéritifs",
+            "Pois chiches grillés",
+            "Fèves grillées",
+            "crackers salés",
+            "Chips de pita",
+            "Chips de crevette",
+            "Galettes de maïs soufflé"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Boissons et ingrédients liquides",
+      "ingredients": [
+        {
+          "name": "Boissons sans alcool utilisées en cuisine",
+          "variants": [
+            "Cola",
+            "Cola sans sucre",
+            "Limonade",
+            "Ginger beer sans alcool",
+            "Jus de pomme",
+            "Jus d'ananas",
+            "Jus de raisin",
+            "Jus de cranberry",
+            "Jus de tomate",
+            "Jus de mangue",
+            "Lait de coco à boire",
+            "Café filtre",
+            "Café espresso",
+            "Café soluble préparé",
+            "Thé noir infusé",
+            "Thé vert infusé",
+            "Infusion de menthe"
+          ]
+        },
+        {
+          "name": "Vins utilisés en cuisine",
+          "variants": [
+            "Vin blanc sec",
+            "Vin blanc moelleux",
+            "Vin rouge",
+            "Vin rosé",
+            "Vin jaune",
+            "Vin doux naturel",
+            "Vin de cuisson blanc",
+            "Vin de cuisson rouge",
+            "Vermouth blanc",
+            "Vermouth rouge",
+            "Madère",
+            "Porto rouge",
+            "Porto blanc",
+            "Marsala",
+            "Xérès sec",
+            "Sherry",
+            "Riesling de cuisine"
+          ]
+        },
+        {
+          "name": "Bières et cidres de cuisine",
+          "variants": [
+            "Bière blonde",
+            "Bière blanche",
+            "Bière ambrée",
+            "Bière brune",
+            "Bière noire",
+            "Bière stout",
+            "Bière IPA",
+            "Bière sans alcool",
+            "Cidre brut",
+            "Cidre doux",
+            "Cidre demi-sec",
+            "Poiré"
+          ]
+        },
+        {
+          "name": "Alcools et spiritueux de cuisine",
+          "variants": [
+            "Rhum blanc",
+            "Rhum ambré",
+            "Rhum brun",
+            "Cognac",
+            "Armagnac",
+            "Calvados",
+            "Eau-de-vie de poire",
+            "Kirsch",
+            "Grand Marnier",
+            "Cointreau",
+            "Triple sec",
+            "Amaretto",
+            "Liqueur de café",
+            "Liqueur d'orange",
+            "Pastis",
+            "Vodka",
+            "Whisky",
+            "Bourbon",
+            "Gin",
+            "Tequila"
+          ]
+        },
+        {
+          "name": "Alcools et condiments asiatiques",
+          "variants": [
+            "Saké de cuisine",
+            "Mirin",
+            "Shaoxing",
+            "Vin de riz chinois",
+            "Vinaigre de riz doux",
+            "Makgeolli"
+          ]
+        },
+        {
+          "name": "Extraits, arômes et liquides culinaires",
+          "variants": [
+            "Arôme naturel de vanille",
+            "Arôme d'amande amère",
+            "Eau de fleur d'oranger",
+            "Eau de rose",
+            "Eau de pandan",
+            "Extrait de café",
+            "Extrait de malt",
+            "Arôme de fumée",
+            "Arôme de rhum",
+            "Arôme de citron",
+            "Arôme de pistache",
+            "Arôme de noix de coco",
+            "Eau de cuisson de pois chiches",
+            "Aquafaba",
+            "Jus de cuisson de légumes"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Conserves et ingrédients prêts à cuisiner",
+      "ingredients": [
+        {
+          "name": "Légumes marinés et préparés",
+          "variants": [
+            "Poivrons grillés en bocal",
+            "Aubergines grillées en bocal",
+            "Courgettes grillées en bocal",
+            "Artichauts marinés",
+            "Tomates séchées à l'huile",
+            "Champignons marinés",
+            "Cœurs de palmier",
+            "Pousses de bambou",
+            "Châtaignes d'eau",
+            "Germes de soja en conserve"
+          ]
+        },
+        {
+          "name": "Fruits en conserve",
+          "variants": [
+            "Ananas au sirop",
+            "Litchis en conserve",
+            "Cocktail de fruits",
+            "Mandarines en conserve",
+            "Cerises amarena"
+          ]
+        },
+        {
+          "name": "Poissons et produits de la mer en conserve",
+          "variants": [
+            "Maquereaux en conserve",
+            "Filets de hareng fumé",
+            "Moules en conserve",
+            "Coquillages en conserve",
+            "Crabe en conserve"
+          ]
+        },
+        {
+          "name": "Plats et préparations de base",
+          "variants": [
+            "Ravioli en conserve",
+            "Ratatouille en conserve",
+            "Lentilles cuisinées en conserve",
+            "Cassoulet en conserve",
+            "Haricots blancs à la tomate",
+            "Chili con carne en conserve",
+            "Soupe de légumes en brique",
+            "Velouté de légumes en brique",
+            "Purée instantanée en flocons",
+            "Polenta précuite"
+          ]
+        },
+        {
+          "name": "Produits culinaires en bocaux et sachets",
+          "variants": [
+            "Cœurs d'artichauts marinés",
+            "Tomates confites en bocal",
+            "Piments doux en bocal",
+            "Maïs en crème",
+            "Châtaignes cuites sous vide",
+            "Marrons entiers en conserve",
+            "Purée de marrons non sucrée",
+            "Pousses de bambou en conserve",
+            "Asperges en bocal",
+            "Salsifis en conserve",
+            "Haricots verts en bocal",
+            "Pois gourmands en conserve"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Produits surgelés et préparations pratiques",
+      "ingredients": [
+        {
+          "name": "Produits de pommes de terre surgelés",
+          "variants": [
+            "Frites fines surgelées",
+            "Frites rustiques surgelées",
+            "Potatoes surgelées",
+            "Röstis surgelés",
+            "Pommes noisettes surgelées",
+            "Pommes duchesse surgelées",
+            "Pommes dauphine surgelées",
+            "Purée de pommes de terre surgelée"
+          ]
+        },
+        {
+          "name": "Pâtes et produits céréaliers surgelés",
+          "variants": [
+            "Pâte feuilletée surgelée",
+            "Pâte brisée surgelée",
+            "Pâte à pizza surgelée",
+            "Pain précuit surgelé",
+            "Riz précuit surgelé",
+            "Quinoa précuit surgelé"
+          ]
+        },
+        {
+          "name": "Préparations surgelées utiles en recette",
+          "variants": [
+            "Ail haché surgelé",
+            "Persil haché surgelé",
+            "Coriandre hachée surgelée",
+            "Basilic haché surgelé",
+            "Échalotes hachées surgelées",
+            "Mélange d'herbes surgelé",
+            "Fruits de mer surgelés",
+            "Crevettes décortiquées surgelées"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Levures, agents levants et gélifiants",
+      "ingredients": [
+        {
+          "name": "Levures et agents levants",
+          "variants": [
+            "Levure chimique",
+            "Levure boulangère fraîche",
+            "Levure boulangère sèche",
+            "Levure instantanée",
+            "Levain déshydraté",
+            "Levain liquide",
+            "Bicarbonate de sodium alimentaire",
+            "Crème de tartre",
+            "Poudre à lever sans gluten",
+            "Ammoniaque alimentaire",
+            "Perles de levure maltée",
+            "Levure maltée en flocons"
+          ]
+        },
+        {
+          "name": "Gélifiants et épaississants",
+          "variants": [
+            "Gélatine en feuilles",
+            "Gélatine en poudre",
+            "Agar-agar",
+            "Pectine jaune",
+            "Pectine NH",
+            "Pectine à confiture",
+            "Carraghénanes",
+            "Gomme xanthane",
+            "Gomme guar",
+            "Gomme de caroube",
+            "Gomme arabique",
+            "Alginate de sodium",
+            "Méthylcellulose alimentaire",
+            "Konjac en poudre",
+            "Amidon modifié",
+            "Fibre de psyllium",
+            "Graines de chia moulues épaississantes"
+          ]
+        },
+        {
+          "name": "Aides techniques de pâtisserie",
+          "variants": [
+            "Glucose atomisé",
+            "Sucre inverti",
+            "Stabilisant pour glace",
+            "Émulsifiant alimentaire",
+            "Lécithine de soja",
+            "Lécithine de tournesol",
+            "Poudre à crème pâtissière",
+            "Améliorant de panification",
+            "Enzyme alimentaire pour pâtisserie",
+            "Poudre de blanc d'œuf",
+            "Albumine en poudre",
+            "Poudre de jaune d'œuf"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Laits et alternatives végétales",
+      "ingredients": [
+        {
+          "name": "Boissons végétales",
+          "variants": [
+            "Boisson au soja nature",
+            "Boisson au soja vanillée",
+            "Boisson à l'avoine",
+            "Boisson à l'avoine barista",
+            "Boisson à l'amande",
+            "Boisson à la noisette",
+            "Boisson au riz",
+            "Boisson à la noix de coco",
+            "Boisson à la noix de cajou",
+            "Boisson au pois",
+            "Boisson au chanvre",
+            "Boisson à l'épeautre",
+            "Boisson végétale enrichie en calcium",
+            "Boisson végétale sans sucre"
+          ]
+        },
+        {
+          "name": "Crèmes végétales",
+          "variants": [
+            "Crème de soja",
+            "Crème d'avoine",
+            "Crème de riz",
+            "Crème d'amande",
+            "Crème de coco",
+            "Crème végétale à cuisiner",
+            "Crème végétale épaisse"
+          ]
+        },
+        {
+          "name": "Yaourts et desserts végétaux",
+          "variants": [
+            "Yaourt au soja nature",
+            "Yaourt au soja vanillé",
+            "Yaourt à l'avoine",
+            "Yaourt à la noix de coco",
+            "Yaourt à l'amande",
+            "Dessert végétal au chocolat",
+            "Dessert végétal à la vanille",
+            "Fromage blanc végétal",
+            "Skyr végétal"
+          ]
+        },
+        {
+          "name": "Fromages végétaux",
+          "variants": [
+            "Fromage végétal à tartiner",
+            "Fromage végétal râpé",
+            "Tranches végétales façon cheddar",
+            "Mozzarella végétale",
+            "Feta végétale",
+            "Parmesan végétal",
+            "Fromage végétal fermenté"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Préparations pâtissières et desserts",
+      "ingredients": [
+        {
+          "name": "Préparations pour desserts",
+          "variants": [
+            "Préparation pour flan pâtissier",
+            "Préparation pour crème pâtissière",
+            "Préparation pour crème brûlée",
+            "Préparation pour panna cotta",
+            "Préparation pour mousse au chocolat",
+            "Préparation pour tiramisu",
+            "Préparation pour cheesecake",
+            "Préparation pour pudding",
+            "Préparation pour riz au lait",
+            "Préparation pour crème caramel",
+            "Préparation pour entremets",
+            "Préparation pour bavarois"
+          ]
+        },
+        {
+          "name": "Garnitures et fruits de pâtisserie",
+          "variants": [
+            "Fourrage aux fruits",
+            "Fourrage à la framboise",
+            "Fourrage à la fraise",
+            "Fourrage à l'abricot",
+            "Nappage neutre",
+            "Nappage miroir chocolat",
+            "Nappage miroir fruits rouges",
+            "Glaçage royal",
+            "Fondant pâtissier",
+            "Pâte à sucre",
+            "Pâte d'amande à modeler",
+            "Gelée de nappage",
+            "Abricots secs moelleux",
+            "Raisins secs blonds",
+            "Raisins secs bruns",
+            "Dattes dénoyautées",
+            "Figues séchées"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ingrédients de cuisine internationale",
+      "ingredients": [
+        {
+          "name": "Produits asiatiques et japonais",
+          "variants": [
+            "Algues nori",
+            "Algues wakamé",
+            "Algues kombu",
+            "Algues hijiki",
+            "Gingembre mariné pour sushi",
+            "Wasabi en pâte",
+            "Wasabi en poudre",
+            "Furikake",
+            "Bonite séchée katsuobushi",
+            "Dashi en poudre",
+            "Nouilles instantanées nature"
+          ]
+        },
+        {
+          "name": "Produits du Moyen-Orient et du Maghreb",
+          "variants": [
+            "Citron confit",
+            "Eau de rose culinaire",
+            "Eau de fleur d'oranger culinaire",
+            "Mélasse de grenade",
+            "Grenade séchée",
+            "Boulgour de maïs",
+            "Freekeh précuit",
+            "Pain saj",
+            "Pâte de tahini",
+            "Halva nature",
+            "Feuilles de filo"
+          ]
+        },
+        {
+          "name": "Produits latino-américains",
+          "variants": [
+            "Masa harina",
+            "Farine de maïs nixtamalisé",
+            "Piments jalapeños en conserve",
+            "Piments chipotle en adobo",
+            "Tomatillos en conserve",
+            "Achiote",
+            "Pâte d'achiote",
+            "Coquilles à tacos",
+            "Arepas précuites",
+            "Farine pour arepas"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Champignons, truffes et produits forestiers",
+      "ingredients": [
+        {
+          "name": "Champignons frais et cultivés",
+          "variants": [
+            "Champignon portobello",
+            "Pleurote jaune",
+            "Pleurote rose",
+            "Shiitaké frais",
+            "Shimeji blanc",
+            "Shimeji brun",
+            "Nameko",
+            "Cèpe frais",
+            "Morille fraîche",
+            "Chanterelle",
+            "Coprin chevelu",
+            "Maitake",
+            "Champignon eryngii"
+          ]
+        },
+        {
+          "name": "Champignons séchés et conservés",
+          "variants": [
+            "Cèpes séchés",
+            "Morilles séchées",
+            "Girolles séchées",
+            "Shiitakés séchés",
+            "Mélange de champignons séchés",
+            "Champignons noirs séchés",
+            "Oreilles de Judas séchées",
+            "Champignons en saumure",
+            "Champignons à l'huile",
+            "Truffe noire fraîche",
+            "Truffe blanche",
+            "Truffe en conserve",
+            "Brisures de truffe",
+            "Jus de truffe",
+            "Carpaccio de truffe"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Produits fermentés et lactofermentés",
+      "ingredients": [
+        {
+          "name": "Légumes fermentés",
+          "variants": [
+            "Kimchi de chou",
+            "Kimchi blanc",
+            "Kimchi de radis",
+            "Pickles lactofermentés",
+            "Carottes lactofermentées",
+            "Betteraves lactofermentées",
+            "Navets lactofermentés",
+            "Ail fermenté",
+            "Ail noir fermenté",
+            "Piments fermentés",
+            "Citron lactofermenté"
+          ]
+        },
+        {
+          "name": "Produits fermentés et pâtes de soja",
+          "variants": [
+            "Natto",
+            "Miso d'orge",
+            "Miso de riz brun",
+            "Miso de pois chiches",
+            "Koji de riz",
+            "Koji d'orge",
+            "Pâte de haricots noirs fermentés",
+            "Doubanjiang",
+            "Tianmianjiang",
+            "Ssamjang"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Produits de la mer et algues",
+      "ingredients": [
+        {
+          "name": "Algues alimentaires et préparations marines",
+          "variants": [
+            "Laitue de mer",
+            "Dulse",
+            "Kombu royal",
+            "Kombu séché",
+            "Wakamé séché",
+            "Nori en paillettes",
+            "Nori en feuilles",
+            "Salicorne",
+            "Haricots de mer",
+            "Spaghettis de mer",
+            "Agar-agar d'algues",
+            "Salade d'algues",
+            "Perles d'algues",
+            "Caviar d'algues"
+          ]
+        },
+        {
+          "name": "Produits marins préparés complémentaires",
+          "variants": [
+            "Œufs de saumon",
+            "Boutargue",
+            "Poutargue râpée",
+            "Rillettes de poisson",
+            "Miettes de crabe",
+            "Surimi râpé",
+            "Chair de tourteau",
+            "Poulpe cuit",
+            "Seiche cuite",
+            "Calamars en anneaux"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Garnitures, toppings et finitions",
+      "ingredients": [
+        {
+          "name": "Garnitures salées et croustillantes",
+          "variants": [
+            "Oignons frits croustillants",
+            "Échalotes frites",
+            "Ail frit croustillant",
+            "Croûtons nature",
+            "Croûtons à l'ail",
+            "Croûtons aux herbes",
+            "Éclats de noix",
+            "Éclats de noisettes torréfiées",
+            "Graines torréfiées",
+            "Oignons crispy",
+            "Parmesan croustillant",
+            "Tuile de fromage",
+            "Peau de poulet croustillante"
+          ]
+        },
+        {
+          "name": "Garnitures sucrées et décorations",
+          "variants": [
+            "Éclats de fèves de cacao",
+            "Amandes effilées grillées",
+            "Noix de coco râpée toastée",
+            "Meringues concassées",
+            "Brisures de biscuits",
+            "Crumble émietté",
+            "Éclats de nougatine",
+            "Pétales de rose séchés",
+            "Fleurs comestibles",
+            "Poudre scintillante alimentaire",
+            "Paillettes de chocolat",
+            "Feuilles d'or alimentaire"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Préparations et ingrédients pour boissons",
+      "ingredients": [
+        {
+          "name": "Poudres et bases pour boissons",
+          "variants": [
+            "Matcha culinaire",
+            "Matcha en poudre",
+            "Chai latte en poudre",
+            "Thé noir en poudre",
+            "Thé vert en poudre",
+            "Hojicha en poudre",
+            "Poudre de cacao instantanée",
+            "Poudre de caroube",
+            "Poudre de betterave",
+            "Poudre de taro",
+            "Poudre de pandan",
+            "Poudre de malt",
+            "Préparation pour chocolat chaud",
+            "Préparation pour boisson matcha",
+            "Préparation pour golden latte",
+            "Poudre de lait malté"
+          ]
+        },
+        {
+          "name": "Concentrés et bases liquides pour boissons",
+          "variants": [
+            "Concentré de gingembre",
+            "Concentré de citron",
+            "Concentré de yuzu",
+            "Concentré de fruit de la passion",
+            "Purée de fruit de la passion",
+            "Purée de fraise",
+            "Sirop de sureau",
+            "Sirop de tonic",
+            "Eau de coco"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ingrédients de pâtisserie spécialisés",
+      "ingredients": [
+        {
+          "name": "Sucres et préparations techniques",
+          "variants": [
+            "Sucre de glucose",
+            "Sucre cristal",
+            "Sucre neige",
+            "Sucre décor",
+            "Sucre à chouquettes",
+            "Sucre pour barbe à papa",
+            "Isomalt en poudre",
+            "Isomalt en perles",
+            "Poudre de meringue",
+            "Poudre à flan",
+            "Poudre à crème",
+            "Poudre à crème pâtissière à froid",
+            "Préparation pour glaçage miroir",
+            "Préparation pour glaçage rocher"
+          ]
+        },
+        {
+          "name": "Fruits et ingrédients de pâtisserie préparés",
+          "variants": [
+            "Cédrat confit",
+            "Angélique confite",
+            "Mélange de fruits confits",
+            "Marrons glacés",
+            "Purée de cassis",
+            "Purée de griotte",
+            "Purée de yuzu",
+            "Fruits pochés"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Produits céréaliers et légumineuses préparés",
+      "ingredients": [
+        {
+          "name": "Préparations de céréales prêtes à cuisiner",
+          "variants": [
+            "Polenta instantanée",
+            "Grits de maïs",
+            "Flocons d'avoine gros",
+            "Flocons d'épeautre",
+            "Mélange de céréales précuites",
+            "Blé précuit",
+            "Épeautre précuit",
+            "Orge précuit"
+          ]
+        },
+        {
+          "name": "Légumineuses préparées complémentaires",
+          "variants": [
+            "Lentilles beluga cuites",
+            "Lentilles corail cuites",
+            "Haricots noirs cuits sous vide",
+            "Edamame écossés",
+            "Edamame surgelés",
+            "Pois cassés cuits",
+            "Purée de haricots rouges",
+            "Fèves pelées surgelées"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Produits de cuisine et aides culinaires",
+      "ingredients": [
+        {
+          "name": "Poudres, flocons et bases salées",
+          "variants": [
+            "Poudre de tomate",
+            "Poudre d'oignon",
+            "Poudre d'ail rôti",
+            "Poudre de champignon",
+            "Poudre de cèpes",
+            "Poudre d'épinard",
+            "Poudre de carotte",
+            "Flocons de pommes de terre",
+            "Purée de pommes de terre en flocons",
+            "Préparation pour purée instantanée",
+            "Mélange pour farce",
+            "Mélange pour panure",
+            "Mélange pour tempura",
+            "Mélange pour pâte à beignets"
+          ]
+        },
+        {
+          "name": "Liants et ingrédients fonctionnels",
+          "variants": [
+            "Protéines de pois texturées",
+            "Protéines de fève texturées",
+            "Protéines de soja texturées fines",
+            "Protéines de soja texturées grosses",
+            "Gluten de blé",
+            "Farine de gluten",
+            "Fibre de bambou alimentaire",
+            "Fibre d'avoine",
+            "Fibre d'agrumes",
+            "Poudre de konjac",
+            "Poudre de blanc d'œuf pasteurisé",
+            "Poudre de lait écrémé"
           ]
         }
       ]
