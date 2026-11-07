@@ -14,10 +14,40 @@ from app.models.recipe import Recipe
 from app.models.recipe_ingredient import RecipeIngredient
 from app.models.recipe_step import RecipeStep
 from app.models.user import User
-from app.schemas.recipe import RecipeCreate, RecipeDetail, RecipePublic
+from app.schemas.recipe import (
+    RecipeCreate,
+    RecipeDetail,
+    RecipePublic,
+    RecipeUpdate,
+)
 
 
 router = APIRouter(prefix="/recipes", tags=["Recipes"])
+
+
+async def get_recipe_or_404(
+    recipe_id: UUID,
+    session: AsyncSession,
+    current_user: User,
+) -> Recipe:
+    result = await session.execute(
+        select(Recipe)
+        .options(
+            selectinload(Recipe.ingredients),
+            selectinload(Recipe.steps),
+        )
+        .where(Recipe.id == recipe_id)
+    )
+
+    recipe = result.scalar_one_or_none()
+
+    if recipe is None or recipe.author_id != current_user.id:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Recipe not found.",
+        )
+
+    return recipe
 
 
 @router.post(
@@ -98,9 +128,7 @@ async def create_recipe(
         .where(Recipe.id == recipe.id)
     )
 
-    saved_recipe = result.scalar_one()
-
-    return RecipeDetail.model_validate(saved_recipe)
+    return RecipeDetail.model_validate(result.scalar_one())
 
 
 @router.get("", response_model=list[RecipePublic])
@@ -110,9 +138,7 @@ async def get_recipes(
     offset: int = Query(default=0, ge=0),
     session: AsyncSession = Depends(get_session),
 ) -> list[RecipePublic]:
-    query = select(Recipe).where(
-        Recipe.is_public.is_(True)
-    )
+    query = select(Recipe).where(Recipe.is_public.is_(True))
 
     if search:
         query = query.where(
@@ -152,13 +178,14 @@ async def get_my_recipes(
         for recipe in result.scalars().all()
     ]
 
+
 @router.get("/{recipe_id}", response_model=RecipeDetail)
 async def get_recipe(
     recipe_id: UUID,
     session: AsyncSession = Depends(get_session),
     current_user: User = Depends(get_current_user),
 ) -> RecipeDetail:
-    query = (
+    result = await session.execute(
         select(Recipe)
         .options(
             selectinload(Recipe.ingredients),
@@ -167,7 +194,6 @@ async def get_recipe(
         .where(Recipe.id == recipe_id)
     )
 
-    result = await session.execute(query)
     recipe = result.scalar_one_or_none()
 
     if recipe is None:
@@ -183,3 +209,117 @@ async def get_recipe(
         )
 
     return RecipeDetail.model_validate(recipe)
+
+
+@router.patch("/{recipe_id}", response_model=RecipeDetail)
+async def update_recipe(
+    recipe_id: UUID,
+    recipe_data: RecipeUpdate,
+    session: AsyncSession = Depends(get_session),
+    current_user: User = Depends(get_current_user),
+) -> RecipeDetail:
+    recipe = await get_recipe_or_404(
+        recipe_id,
+        session,
+        current_user,
+    )
+
+    update_data = recipe_data.model_dump(
+        exclude_unset=True,
+        exclude={"ingredients", "steps"},
+    )
+
+    if "title" in update_data and update_data["title"] is None:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail="Recipe title cannot be null.",
+        )
+
+    for field, value in update_data.items():
+        setattr(recipe, field, value)
+
+    if "ingredients" in recipe_data.model_fields_set:
+        if not recipe_data.ingredients:
+            raise HTTPException(
+                status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+                detail="A recipe must contain at least one ingredient.",
+            )
+
+        ingredient_ids = {
+            item.ingredient_id for item in recipe_data.ingredients
+        }
+
+        result = await session.execute(
+            select(Ingredient.id).where(Ingredient.id.in_(ingredient_ids))
+        )
+        existing_ids = set(result.scalars().all())
+
+        if ingredient_ids != existing_ids:
+            raise HTTPException(
+                status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+                detail="One or more ingredients do not exist.",
+            )
+
+        recipe.ingredients = [
+            RecipeIngredient(
+                ingredient_id=item.ingredient_id,
+                quantity=item.quantity,
+                unit=item.unit,
+                position=index,
+            )
+            for index, item in enumerate(recipe_data.ingredients)
+        ]
+
+    if "steps" in recipe_data.model_fields_set:
+        if not recipe_data.steps:
+            raise HTTPException(
+                status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+                detail="A recipe must contain at least one preparation step.",
+            )
+
+        recipe.steps = [
+            RecipeStep(
+                instruction=item.instruction,
+                position=index,
+            )
+            for index, item in enumerate(recipe_data.steps)
+        ]
+
+    try:
+        await session.commit()
+    except IntegrityError:
+        await session.rollback()
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail="The recipe could not be updated.",
+        )
+
+    result = await session.execute(
+        select(Recipe)
+        .options(
+            selectinload(Recipe.ingredients),
+            selectinload(Recipe.steps),
+        )
+        .where(Recipe.id == recipe_id)
+    )
+
+    return RecipeDetail.model_validate(result.scalar_one())
+
+
+@router.delete(
+    "/{recipe_id}",
+    status_code=status.HTTP_204_NO_CONTENT,
+)
+async def delete_recipe(
+    recipe_id: UUID,
+    session: AsyncSession = Depends(get_session),
+    current_user: User = Depends(get_current_user),
+) -> None:
+    recipe = await get_recipe_or_404(
+        recipe_id,
+        session,
+        current_user,
+    )
+
+    await session.delete(recipe)
+    await session.commit()
