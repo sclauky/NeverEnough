@@ -5,15 +5,19 @@ from sqlalchemy import (
     Boolean,
     CheckConstraint,
     DateTime,
+    Float,
     ForeignKey,
     String,
     Text,
     Uuid,
+    cast,
     func,
+    select,
 )
-from sqlalchemy.orm import Mapped, mapped_column, relationship
+from sqlalchemy.orm import Mapped, column_property, mapped_column, relationship
 
 from app.db.base import Base
+from app.models.recipe_review import RecipeReview
 
 
 class Recipe(Base):
@@ -93,7 +97,29 @@ class Recipe(Base):
         onupdate=func.now(),
         nullable=False,
     )
-    
+
+    average_rating: Mapped[float] = column_property(
+        select(
+            cast(
+                func.coalesce(
+                    func.round(func.avg(RecipeReview.rating), 2),
+                    0.0,
+                ),
+                Float,
+            )
+        )
+        .where(RecipeReview.recipe_id == id)
+        .correlate_except(RecipeReview)
+        .scalar_subquery()
+    )
+
+    review_count: Mapped[int] = column_property(
+        select(func.count(RecipeReview.id))
+        .where(RecipeReview.recipe_id == id)
+        .correlate_except(RecipeReview)
+        .scalar_subquery()
+    )
+
     ingredients: Mapped[list["RecipeIngredient"]] = relationship(
         back_populates="recipe",
         cascade="all, delete-orphan",

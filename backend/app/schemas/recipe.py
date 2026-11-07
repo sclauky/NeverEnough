@@ -1,4 +1,3 @@
-
 from datetime import datetime
 from uuid import UUID
 
@@ -54,6 +53,8 @@ class RecipePublic(BaseModel):
     prep_time_minutes: int | None
     cook_time_minutes: int | None
     is_public: bool
+    average_rating: float
+    review_count: int
     created_at: datetime
     updated_at: datetime
 
