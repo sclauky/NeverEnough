@@ -70,6 +70,100 @@ def round_money(value: Decimal) -> Decimal:
     )
 
 
+def calculate_packages(
+    required_quantity: Decimal,
+    package_quantity: Decimal,
+) -> int:
+    return int(
+        (required_quantity / package_quantity).to_integral_value(
+            rounding=ROUND_CEILING
+        )
+    )
+
+
+def build_selection(
+    ingredient_totals: dict,
+    products: dict,
+    optimization: str,
+) -> dict:
+    total = Decimal("0")
+    missing = []
+    items = []
+
+    for ingredient_id, required in ingredient_totals.items():
+        candidates = products.get(ingredient_id, [])
+
+        if not candidates:
+            missing.append(str(ingredient_id))
+            continue
+
+        if optimization == "consumed":
+            selected = min(
+                candidates,
+                key=lambda item: (
+                    item["unit_price"],
+                    item["package_price"],
+                ),
+            )
+        else:
+            selected = min(
+                candidates,
+                key=lambda item: (
+                    item["package_price"]
+                    * calculate_packages(
+                        required["quantity"],
+                        item["package_base_quantity"],
+                    ),
+                    item["unit_price"],
+                ),
+            )
+
+        required_quantity = required["quantity"]
+        packages_needed = calculate_packages(
+            required_quantity,
+            selected["package_base_quantity"],
+        )
+
+        consumed_cost = selected["unit_price"] * required_quantity
+        purchase_cost = selected["package_price"] * packages_needed
+
+        cost = consumed_cost if optimization == "consumed" else purchase_cost
+        total += cost
+
+        items.append(
+            {
+                "ingredient_id": str(ingredient_id),
+                "product_id": str(selected["product_id"]),
+                "product_name": selected["product_name"],
+                "brand": selected["brand"],
+                "required_quantity": required_quantity,
+                "unit": required["unit"],
+                "packages_needed": packages_needed,
+                "package_quantity": selected["package_quantity"],
+                "package_unit": selected["package_unit"],
+                "package_price": selected["package_price"],
+                "consumed_cost": round_money(consumed_cost),
+                "purchase_cost": round_money(purchase_cost),
+                "currency_code": selected["currency_code"],
+            }
+        )
+
+    return {
+        "complete": not missing,
+        "missing_ingredients": missing,
+        "total": round_money(total),
+        "currency_code": next(
+            (
+                item["currency_code"]
+                for candidates in products.values()
+                for item in candidates
+            ),
+            "EUR",
+        ),
+        "items": items,
+    }
+
+
 async def calculate_recipe_cost(
     session: AsyncSession,
     recipe_id: UUID,
@@ -122,8 +216,9 @@ async def calculate_recipe_cost(
             )
             continue
 
-        unit = normalize_unit(recipe_ingredient.unit)
-        unit_data = UNIT_CONVERSIONS.get(unit)
+        unit_data = UNIT_CONVERSIONS.get(
+            normalize_unit(recipe_ingredient.unit)
+        )
 
         if unit_data is None:
             missing_ingredients.append(
@@ -136,15 +231,13 @@ async def calculate_recipe_cost(
             continue
 
         dimension, conversion_factor = unit_data
-        base_unit = BASE_UNITS[dimension]
-        quantity = recipe_ingredient.quantity * scale
-        base_quantity = quantity * conversion_factor
+        base_quantity = recipe_ingredient.quantity * scale * conversion_factor
 
         if ingredient.id not in ingredient_totals:
             ingredient_totals[ingredient.id] = {
                 "quantity": Decimal("0"),
                 "dimension": dimension,
-                "unit": base_unit,
+                "unit": BASE_UNITS[dimension],
                 "name": ingredient.name,
             }
 
@@ -175,12 +268,10 @@ async def calculate_recipe_cost(
 
     latest_prices = (
         select(
-            ProductPrice.id.label("price_id"),
             ProductPrice.product_id.label("product_id"),
             ProductPrice.store_id.label("store_id"),
             ProductPrice.price.label("price"),
             ProductPrice.currency_code.label("currency_code"),
-            ProductPrice.observed_at.label("observed_at"),
             func.row_number()
             .over(
                 partition_by=(
@@ -220,7 +311,8 @@ async def calculate_recipe_cost(
 
     results = (await session.execute(query)).all()
 
-    store_products = defaultdict(dict)
+    store_products = defaultdict(lambda: defaultdict(list))
+    store_data = {}
 
     for product, price, currency_code, store in results:
         ingredient_id = product.ingredient_id
@@ -229,20 +321,21 @@ async def calculate_recipe_cost(
         if required is None:
             continue
 
-        converted_package = convert_quantity(
+        package_quantity = convert_quantity(
             product.package_quantity,
             product.package_unit,
             required["unit"],
         )
 
-        if converted_package is None or converted_package <= 0:
+        if package_quantity is None or package_quantity <= 0:
             continue
 
-        unit_price = price / converted_package
-        current = store_products[store.id].get(ingredient_id)
+        unit_price = price / package_quantity
 
-        if current is None or unit_price < current["unit_price"]:
-            store_products[store.id][ingredient_id] = {
+        store_data[store.id] = store
+
+        store_products[store.id][ingredient_id].append(
+            {
                 "product_id": product.id,
                 "product_name": product.name,
                 "brand": product.brand,
@@ -251,78 +344,35 @@ async def calculate_recipe_cost(
                 "package_price": price,
                 "currency_code": currency_code,
                 "unit_price": unit_price,
-                "store": store,
-                "package_base_quantity": converted_package,
+                "package_base_quantity": package_quantity,
             }
+        )
 
     stores_result = []
 
     for store_id, products in store_products.items():
-        store = next(iter(products.values()))["store"]
+        store = store_data[store_id]
+
         currencies = {
             item["currency_code"]
-            for item in products.values()
+            for candidates in products.values()
+            for item in candidates
         }
 
         if len(currencies) != 1:
-            missing_ingredients_for_store = [
-                {
-                    "ingredient_id": str(ingredient_id),
-                    "ingredient_name": required["name"],
-                    "reason": "Incompatible currencies in this store.",
-                }
-                for ingredient_id, required in ingredient_totals.items()
-            ]
-
-            missing_ingredients.extend(missing_ingredients_for_store)
             continue
 
-        currency_code = next(iter(currencies))
-        consumed_total = Decimal("0")
-        purchase_total = Decimal("0")
-        missing = []
-        items = []
+        consumed_selection = build_selection(
+            ingredient_totals,
+            products,
+            "consumed",
+        )
 
-        for ingredient_id, required in ingredient_totals.items():
-            product = products.get(ingredient_id)
-
-            if product is None:
-                missing.append(str(ingredient_id))
-                continue
-
-            required_quantity = required["quantity"]
-            package_quantity = product["package_base_quantity"]
-
-            consumed_cost = product["unit_price"] * required_quantity
-
-            packages_needed = int(
-                (required_quantity / package_quantity).to_integral_value(
-                    rounding=ROUND_CEILING
-                )
-            )
-
-            purchase_cost = product["package_price"] * packages_needed
-
-            consumed_total += consumed_cost
-            purchase_total += purchase_cost
-
-            items.append(
-                {
-                    "ingredient_id": str(ingredient_id),
-                    "product_id": str(product["product_id"]),
-                    "product_name": product["product_name"],
-                    "brand": product["brand"],
-                    "required_quantity": required_quantity,
-                    "unit": required["unit"],
-                    "packages_needed": packages_needed,
-                    "package_quantity": product["package_quantity"],
-                    "package_unit": product["package_unit"],
-                    "package_price": product["package_price"],
-                    "consumed_cost": round_money(consumed_cost),
-                    "purchase_cost": round_money(purchase_cost),
-                    "currency_code": currency_code,
-                }
-            )
+        purchase_selection = build_selection(
+            ingredient_totals,
+            products,
+            "purchase",
+        )
 
         stores_result.append(
             {
@@ -331,19 +381,15 @@ async def calculate_recipe_cost(
                 "chain_name": store.chain_name,
                 "address": store.address,
                 "city": store.city,
-                "complete": not missing,
-                "missing_ingredients": missing,
-                "consumed_total": round_money(consumed_total),
-                "purchase_total": round_money(purchase_total),
-                "currency_codes": [currency_code],
-                "items": items,
+                "consumed_optimization": consumed_selection,
+                "purchase_optimization": purchase_selection,
             }
         )
 
     stores_result.sort(
         key=lambda item: (
-            not item["complete"],
-            item["purchase_total"],
+            not item["purchase_optimization"]["complete"],
+            item["purchase_optimization"]["total"],
         )
     )
 

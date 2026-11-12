@@ -23,6 +23,16 @@ class RecipeCostItem(BaseModel):
     currency_code: str
 
 
+class RecipeCostOptimization(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    complete: bool
+    missing_ingredients: list[UUID]
+    total: Decimal
+    currency_code: str
+    items: list[RecipeCostItem]
+
+
 class MissingRecipeIngredient(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
@@ -32,7 +42,6 @@ class MissingRecipeIngredient(BaseModel):
         "Missing quantity or unit.",
         "Unsupported recipe unit.",
         "Incompatible units for the same ingredient.",
-        "Incompatible currencies in this store.",
     ]
 
 
@@ -44,12 +53,8 @@ class RecipeCostStore(BaseModel):
     chain_name: str
     address: str
     city: str
-    complete: bool
-    missing_ingredients: list[UUID]
-    consumed_total: Decimal
-    purchase_total: Decimal
-    currency_codes: list[str]
-    items: list[RecipeCostItem]
+    consumed_optimization: RecipeCostOptimization
+    purchase_optimization: RecipeCostOptimization
 
 
 class RecipeCostPublic(BaseModel):
