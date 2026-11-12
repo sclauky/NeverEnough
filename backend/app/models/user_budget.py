@@ -1,11 +1,12 @@
 import uuid
-from decimal import Decimal
 from datetime import datetime
+from decimal import Decimal
 
 from sqlalchemy import (
     CheckConstraint,
     DateTime,
     ForeignKey,
+    Integer,
     Numeric,
     String,
     Uuid,
@@ -27,6 +28,10 @@ class UserBudget(Base):
         CheckConstraint(
             "period_type IN ('week', 'month')",
             name="ck_user_budgets_valid_period",
+        ),
+        CheckConstraint(
+            "people_count > 0",
+            name="ck_user_budgets_people_count_positive",
         ),
     )
 
@@ -50,6 +55,12 @@ class UserBudget(Base):
 
     period_type: Mapped[str] = mapped_column(
         String(5),
+        nullable=False,
+    )
+
+    people_count: Mapped[int] = mapped_column(
+        Integer,
+        default=1,
         nullable=False,
     )
 

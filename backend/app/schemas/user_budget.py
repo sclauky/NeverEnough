@@ -17,6 +17,31 @@ class UserBudgetCreate(BaseModel):
 
     period_type: Literal["week", "month"]
 
+    people_count: int = Field(
+        default=1,
+        ge=1,
+        le=50,
+    )
+
+
+class UserBudgetUpdate(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    amount: Decimal | None = Field(
+        default=None,
+        gt=0,
+        max_digits=10,
+        decimal_places=2,
+    )
+
+    period_type: Literal["week", "month"] | None = None
+
+    people_count: int | None = Field(
+        default=None,
+        ge=1,
+        le=50,
+    )
+
 
 class UserBudgetPublic(BaseModel):
     model_config = ConfigDict(from_attributes=True)
@@ -24,5 +49,6 @@ class UserBudgetPublic(BaseModel):
     id: UUID
     amount: Decimal
     period_type: Literal["week", "month"]
+    people_count: int
     created_at: datetime
     updated_at: datetime
