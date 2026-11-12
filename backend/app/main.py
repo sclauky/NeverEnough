@@ -13,6 +13,7 @@ from app.api.routes.budgets import router as budgets_router
 from app.api.routes.recipe_cost import router as recipe_cost_router
 from app.api.routes.stores import router as stores_router
 from app.api.routes.products import router as products_router
+from app.api.routes.product_prices import router as product_prices_router
 
 app = FastAPI(
     title="Never Enough API",
@@ -31,6 +32,7 @@ app.include_router(budgets_router)
 app.include_router(recipe_cost_router)
 app.include_router(stores_router)
 app.include_router(products_router)
+app.include_router(product_prices_router)
 
 
 @app.get("/health", tags=["Health"])
