@@ -1,3 +1,4 @@
+
 from datetime import datetime
 from decimal import Decimal
 from uuid import UUID
@@ -32,6 +33,40 @@ class ShoppingListItemCreate(BaseModel):
 
     position: int = Field(
         default=0,
+        ge=0,
+    )
+
+
+class ShoppingListItemUpdate(BaseModel):
+    model_config = ConfigDict(
+        extra="forbid",
+        str_strip_whitespace=True,
+    )
+
+    ingredient_id: UUID | None = None
+
+    name: str | None = Field(
+        default=None,
+        min_length=1,
+        max_length=120,
+    )
+
+    quantity: Decimal | None = Field(
+        default=None,
+        gt=0,
+        max_digits=10,
+        decimal_places=3,
+    )
+
+    unit: str | None = Field(
+        default=None,
+        max_length=30,
+    )
+
+    is_purchased: bool | None = None
+
+    position: int | None = Field(
+        default=None,
         ge=0,
     )
 

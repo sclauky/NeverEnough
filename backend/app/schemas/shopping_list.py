@@ -1,7 +1,10 @@
+
 from datetime import datetime
 from uuid import UUID
 
 from pydantic import BaseModel, ConfigDict, Field
+
+from app.schemas.shopping_list_item import ShoppingListItemPublic
 
 
 class ShoppingListCreate(BaseModel):
@@ -27,3 +30,7 @@ class ShoppingListPublic(BaseModel):
     title: str | None
     created_at: datetime
     updated_at: datetime
+
+
+class ShoppingListDetail(ShoppingListPublic):
+    items: list[ShoppingListItemPublic]
