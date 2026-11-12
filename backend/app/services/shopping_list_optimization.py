@@ -32,9 +32,16 @@ def build_shopping_selection(
     )
 
     for item in selection["items"]:
-        item["store_id"] = item.pop("_store_id")
-        item["store_name"] = item.pop("_store_name")
-        item["chain_name"] = item.pop("_chain_name")
+        ingredient_id = UUID(item["ingredient_id"])
+        selected = next(
+            candidate
+            for candidate in products[ingredient_id]
+            if str(candidate["product_id"]) == item["product_id"]
+        )
+
+        item["store_id"] = selected["_store_id"]
+        item["store_name"] = selected["_store_name"]
+        item["chain_name"] = selected["_chain_name"]
 
     return selection
 
